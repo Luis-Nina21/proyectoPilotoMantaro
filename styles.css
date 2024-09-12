@@ -12,8 +12,9 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #004d40;
+    background-color: #004d40d7;
     color: white;
+    background: linear-gradient(#004d40d7, white, 180seg);
 }
 
 .header .logo {
@@ -22,11 +23,21 @@ body {
 }
 
 .header .logo img {
-    height: 50px;
-    margin-right: 10px;
+    height: 70px;
+    margin-right: 100px;
 }
 
+.header .entidades{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
 .header .entidades img {
+    height: 60px;
+    margin-left: 15px;
+}
+.header .entidades .sernamp{
     height: 40px;
     margin-left: 15px;
 }
