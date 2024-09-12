@@ -101,8 +101,8 @@ body {
     }
 
     .card {
-        width: 100%;
-        margin: 10px 0;
+        width: 100%; /* Ocupa el ancho completo en dispositivos móviles */
+        margin: 10px 0; /* Ajusta el margen para un espaciado uniforme */
     }
 
     .card img {
