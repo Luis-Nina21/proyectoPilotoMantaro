@@ -66,50 +66,6 @@ body {
     height: 40px;
 }
 
-/* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
-@media screen and (max-width: 768px) {
-    .header {
-        flex-direction: column;
-    }
-
-    .logo img {
-        width: 50px; /* Ajusta el tamaño de la imagen para dispositivos móviles */
-    }
-
-    .logo h1 {
-        font-size: 24px; /* Ajusta el tamaño del texto */
-    }
-
-    .header .entidades {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        margin-bottom: 10px; /* Ajusta el margen para un mejor espaciado */
-    }
-
-    .header .entidades img {
-        height: 50px;
-        margin: 5px; /* Ajusta el margen para un espacio uniforme */
-    }
-
-    .header.fixed .entidades {
-        display: none; /* Oculta los logos de las entidades cuando el encabezado está fijo */
-    }
-
-    .cards-container {
-        flex-direction: column;
-    }
-
-    .card {
-        width: 100%; /* Ocupa el ancho completo en dispositivos móviles */
-        margin: 10px 0; /* Ajusta el margen para un espaciado uniforme */
-    }
-
-    .card img {
-        height: auto; /* Asegura que la imagen no se distorsione */
-    }
-}
-
 /* Carrusel */
 .carousel {
     position: relative;
@@ -173,11 +129,12 @@ body {
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
-    width: 250px;
+    width: 25%;
     transition: transform 0.2s;
     cursor: pointer;
     overflow: hidden;
     position: relative;
+    box-sizing: border-box; /* Asegura que padding y border no causen desplazamiento */
 }
 
 .card img {
@@ -248,4 +205,54 @@ body {
 .close:focus {
     color: black;
     cursor: pointer;
+}
+
+
+
+/* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
+@media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 50px; /* Ajusta el tamaño de la imagen para dispositivos móviles */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+
+    .header .entidades {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin-bottom: 10px; /* Ajusta el margen para un mejor espaciado */
+    }
+
+    .header .entidades img {
+        height: 50px;
+        margin: 5px; /* Ajusta el margen para un espacio uniforme */
+    }
+
+    .header.fixed .entidades {
+        display: none; /* Oculta los logos de las entidades cuando el encabezado está fijo */
+    }
+
+    .cards-container {
+        display: flex;
+        flex-direction: column; /* Asegura que las tarjetas se apilen verticalmente */
+        align-items: stretch; /* Asegura que las tarjetas se estiren para ocupar el ancho completo */
+        padding: 0; /* Elimina el padding para evitar espacios no deseados */
+    }
+
+    .card {
+        width: 100%; /* Ocupa el ancho completo en dispositivos móviles */
+        margin: 10px 0; /* Ajusta el margen para un espaciado uniforme */
+        box-sizing: border-box; /* Asegura que padding y border no causen desplazamiento */
+    }
+
+    .card img {
+        height: auto; /* Asegura que la imagen no se distorsione */
+    }
 }
