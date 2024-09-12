@@ -21,6 +21,7 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Cambia la imagen cada 5 segundos
 }
 
+// Función para actualizar el índice de la diapositiva actual
 function currentSlide(n) {
     slideIndex = n;
     showSlides();
@@ -53,3 +54,19 @@ function openInfo(type) {
 function closeModal() {
     document.getElementById("infoModal").style.display = "none";
 }
+
+// Función para fijar el encabezado después de pasar el carrusel
+window.addEventListener('scroll', function() {
+    const header = document.querySelector('.header');
+    const carrusel = document.querySelector('.carousel');
+    const carruselHeight = carrusel.offsetHeight;
+    const scrollPosition = window.scrollY;
+
+    if (scrollPosition > carruselHeight) {
+        header.classList.add('fixed');
+        document.body.style.paddingTop = `${header.offsetHeight}px`; // Añadir padding para evitar que el contenido se superponga
+    } else {
+        header.classList.remove('fixed');
+        document.body.style.paddingTop = '0'; // Eliminar el padding cuando el header no está fijo
+    }
+});

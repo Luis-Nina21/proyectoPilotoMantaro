@@ -1,6 +1,6 @@
 /* Estilos generales */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Poppins', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -9,50 +9,59 @@ body {
 /* Header */
 .header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
     padding: 10px 20px;
-    background-color: #004d40d7;
-    color: white;
-    background: linear-gradient(#004d40d7, white, 180seg);
+    background-color: #004d40e4;
+    color: rgba(255, 255, 255, 0.66);
+    transition: all 0.3s ease-in-out; /* Transición suave */
+    position: relative; /* Para evitar desplazamiento horizontal */
+    width: 100%;
+    box-sizing: border-box; /* Asegura que padding y border no causen desplazamiento */
 }
 
-.header .logo {
+.header.fixed {
+    position: fixed; /* Se fija en su lugar al hacer scroll */
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    width: 100%;
+}
+
+.logo {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    align-items: center; /* Alinea verticalmente el texto con la imagen */
+    margin-bottom: 10px;
 }
 
-.header .logo img {
-    height: 70px;
-    margin-right: 100px;
+.logo img {
+    margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
+    width: 60px; /* Ajusta el tamaño de la imagen si es necesario */
+    height: auto;
 }
 
-.header .entidades{
+.logo h1 {
+    margin: 0; /* Elimina cualquier margen que tenga el h1 por defecto */
+    font-size: 28px; /* Ajusta el tamaño de la fuente */
+    font-weight: 800;
+}
+
+.header .entidades {
     display: flex;
     justify-content: center;
     align-items: center;
-
+    margin-bottom: 20px;
 }
+
 .header .entidades img {
     height: 60px;
-    margin-left: 15px;
+    margin: 0 5px; /* Ajusta el margen para un espacio uniforme */
 }
-.header .entidades .sernamp{
+
+.header .entidades .sernamp {
     height: 40px;
-    margin-left: 15px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* Carrusel */
 .carousel {
@@ -203,8 +212,41 @@ footer {
     position: relative;
 }
 
+/* Estilos Responsivos */
 @media screen and (max-width: 768px) {
+    .header {
+        flex-direction: column;
+    }
+
+    .logo img {
+        width: 50px; /* Ajusta el tamaño de la imagen para dispositivos móviles */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+
+    .header .entidades {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .header .entidades img {
+        height: 50px;
+        margin: 5px; /* Ajusta el margen para un espacio uniforme */
+    }
+
     .cards-container {
         flex-direction: column;
+    }
+
+    .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .card img {
+        height: auto; /* Asegura que la imagen no se distorsione */
     }
 }
