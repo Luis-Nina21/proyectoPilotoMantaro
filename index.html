@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Proyecto Río Mantaro</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+    <!-- Header con logo y logos de entidades -->
+    <header class="header">
+        <div class="logo">
+            <img src="imagenes/logo_mantaro.png" alt="Logo Río Mantaro">
+            <h1>Río Mantaro</h1>
+        </div>
+        <nav class="entidades">
+            <img src="imagenes/logo_gob.png" alt="Entidad 1">
+            <img src="imagenes/logo_midis.png" alt="Entidad 2">
+            <img src="imagenes/logo_turismo.png" alt="Entidad 3">
+        </nav>
+    </header>
+
+    <!-- Carrusel de imágenes -->
+    <section class="carousel">
+        <div class="slides">
+            <div class="slide active" style="background-image: url('./imagenes/rio-mantaro.jpg');">
+                <h2>Conservando el Patrimonio del Río Mantaro</h2>
+            </div>
+            <div class="slide" style="background-image: url('imagenes/carrusel2.jpg');">
+                <h2>Promoviendo el Turismo Sostenible</h2>
+            </div>
+            <div class="slide" style="background-image: url('imagenes/carrusel3.jpg');">
+                <h2>Protegiendo la Flora y Fauna del Valle</h2>
+            </div>
+        </div>
+        <div class="dots">
+            <span class="dot active" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+        </div>
+    </section>
+
+    <!-- Sección de tarjetas -->
+    <section class="cards-section">
+        <h2>Zonas Importantes del Río Mantaro</h2>
+        <div class="cards-container">
+            <!-- Tarjeta 1 -->
+            <div class="card" onclick="openInfo('flora')">
+                <img style="width: 100%;"  src="/imagenes/RioMantaro-2.jpg" alt="Flora">
+                <div class="card-content">
+                    <h3>Flora del Valle del Mantaro</h3>
+                    <p>Explora la biodiversidad vegetal del valle, rica en especies endémicas.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 2 -->
+            <div class="card" onclick="openInfo('fauna')">
+                <img src="./imagenes/RioMantaro-2.jpg" alt="Fauna">
+                <div class="card-content">
+                    <h3>Fauna del Río Mantaro</h3>
+                    <p>Descubre la vida silvestre que habita en las cercanías del río.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 3 -->
+            <div class="card" onclick="openInfo('caudal')">
+                <img src="/imagenes/rio-mantaro.jpg" alt="Caudal del Río">
+                <div class="card-content">
+                    <h3>Caudal en Tiempo Real</h3>
+                    <p>Simulación del caudal del río Mantaro actualizado en tiempo real.</p>
+                </div>
+            </div>
+
+            <!-- Tarjeta 4 -->
+            <div class="card" onclick="openInfo('turismo')">
+                <img src="/imagenes/rio-mantaro.jpg" alt="Lugares Turísticos">
+                <div class="card-content">
+                    <h3>Lugares Turísticos</h3>
+                    <p>Visita los destinos turísticos más importantes alrededor del río.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mapa Interactivo -->
+    <section class="map-section">
+        <h2>Mapa de la Cuenca del Río Mantaro</h2>
+        <div id="map"></div>
+    </section>
+
+    <!-- Modal para información detallada -->
+    <div id="infoModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modalInfo"></div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2024 Proyecto Río Mantaro - Todos los derechos reservados | Contacto: info@riomantaro.pe</p>
+    </footer>
+
+</body>
+</html>
