@@ -18,6 +18,7 @@ body {
     transition: all 0.3s ease-in-out; /* Transición suave */
     position: relative; /* Para evitar desplazamiento horizontal */
     width: 100%;
+    height: 70px;
     box-sizing: border-box; /* Asegura que padding y border no causen desplazamiento */
 }
 
@@ -46,24 +47,27 @@ body {
 .logo h1 {
     margin: 0; /* Elimina cualquier margen que tenga el h1 por defecto */
     font-size: 28px; /* Ajusta el tamaño de la fuente */
+    font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
+    color: rgba(19, 176, 19, 0.843);
 }
 
 /* Entidades */
 .header .entidades {
     display: flex;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px;
+    
 }
 
 .header .entidades img {
-    height: 60px;
+    height: 45px;
     margin: 0 5px; /* Ajusta el margen para un espacio uniforme */
 }
 
 .header .entidades .sernamp {
-    height: 40px;
+    height: 25px;
 }
 /* Estilos del Carrusel */
 .carousel {
@@ -110,13 +114,14 @@ body {
     transform: translate(-50%, -50%); /* Centra el texto en ambas direcciones */
     margin: 0; /* Elimina márgenes por defecto */
     font-size: 2rem; /* Tamaño de la fuente */
-    font-weight: 700; /* Peso de la fuente */
+    font-weight: 800; /* Peso de la fuente */
+    font-family: Arial, Helvetica, sans-serif;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
     text-align: center; /* Centra el texto horizontalmente */
     padding: 0 20px; /* Espacio horizontal dentro del texto */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
     z-index: 3; /* Asegura que el texto esté sobre la capa de oscurecimiento */
-    color: #f2ab27db;
+    color: #f2ab27cb;
 }
 
 /* Dots del carrusel */
@@ -384,6 +389,83 @@ body {
 }
 
 
+/*----------------BUCLE DEL TERMOMETRO----------------*/
+
+
+
+.titulo_clima h2{
+    font-size: 30px;
+    margin: 10px;
+    font-weight: 900px;
+    color: #004d40e4;
+
+}
+/* Contenedor del SVG */
+.thermometer-svg-container {
+    display: flex;
+    justify-content: center; /* Espacio entre los SVGs */
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    height: 50vh;
+    width: 30%;
+    background-color: #f0f0f0;
+}
+.thermometer-svg-container h3{
+    font-size: 30px;
+    text-align: center;
+    font-weight: 900;
+    font-family: Arial, Helvetica, sans-serif;
+    
+}
+
+
+/* Relleno dinámico */
+.fill-red {
+    stroke: red;
+    stroke-width: 1.5;
+    fill: none;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: fillThermometerRed 2s ease-in-out infinite;
+}
+
+.fill-blue {
+    stroke: rgb(24, 146, 191);
+    stroke-width: 1.5;
+    fill: none;
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: fillThermometerBlue 2s ease-in-out infinite;
+}
+
+/* Parte externa del termómetro */
+.outline {
+    stroke: #000;
+    stroke-width: 0.5;
+    fill: none;
+}
+
+/* Animaciones de relleno */
+@keyframes fillThermometerRed {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes fillThermometerBlue {
+    0% {
+        stroke-dashoffset: 100;
+    }
+    100% {
+        stroke-dashoffset: 0;
+    }
+}
+
+
 
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
 @media screen and (max-width: 768px) {
@@ -391,10 +473,14 @@ body {
         flex-direction: column;
     }
     .header .entidades{
-        height: 40px;
+        height: 40px; 
     }
     .header .entidades .sernamp {
         height: 20px;
+    }
+
+    .thermometer-svg-container {
+        width: 100%;
     }
 
     .logo img {

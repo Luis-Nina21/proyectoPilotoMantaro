@@ -78,3 +78,18 @@ document.querySelector('.scroll-to-top').addEventListener('click', function(even
     event.preventDefault();
     document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+/*------------------------BUCLE DEL TERMOMETRO-------------------*/
+const fill = document.querySelector('.fill');
+
+function animateThermometer() {
+    fill.style.height = '100%'; // Llenar el termómetro
+
+    setTimeout(() => {
+        fill.style.height = '0%'; // Vaciar el termómetro
+    }, 2000); // Esperar 2 segundos antes de vaciar
+}
+
+// Repetir la animación en bucle
+setInterval(animateThermometer, 4000); // Cada 4 segundos (2 para llenar, 2 para vaciar)
