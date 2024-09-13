@@ -10,6 +10,7 @@ body {
 .header {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -68,6 +69,16 @@ body {
 
 .header .entidades .sernamp {
     height: 25px;
+}
+
+.buscador {
+    display: none;
+   /* align-items: center;
+    margin-left: auto;  Asegura que el buscador esté a la derecha */
+}
+
+.buscador svg {
+    cursor: pointer;
 }
 
 
@@ -152,7 +163,7 @@ body {
 }
 
 .news-button:hover {
-    background-color: #1263bb; /* Color de fondo en hover */
+    background-color: rgba(255, 255, 255, 0.213); /* Color de fondo en hover */
 }
 
 
@@ -403,7 +414,7 @@ body {
     display: flex;
     justify-content: center;
     margin-top: 10px; /* Espacio superior para los íconos sociales */
-    margin-bottom: 40px;
+    margin-bottom: 20px;
 }
 
 .social-icon {
@@ -499,10 +510,21 @@ body {
 
 
 
+#fotoLuan{
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
 @media screen and (max-width: 768px) {
     .header {
         flex-direction: column;
+        
+    }
+
+    .buscador{
+        text-align: end;
     }
     .header .entidades{
         height: 40px; 
