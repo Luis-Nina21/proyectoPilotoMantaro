@@ -93,3 +93,6 @@ function animateThermometer() {
 
 // Repetir la animación en bucle
 setInterval(animateThermometer, 4000); // Cada 4 segundos (2 para llenar, 2 para vaciar)
+
+
+

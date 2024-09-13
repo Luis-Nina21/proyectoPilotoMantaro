@@ -69,6 +69,10 @@ body {
 .header .entidades .sernamp {
     height: 25px;
 }
+
+
+
+
 /* Estilos del Carrusel */
 .carousel {
     position: relative;
@@ -123,6 +127,34 @@ body {
     z-index: 3; /* Asegura que el texto esté sobre la capa de oscurecimiento */
     color: #f2ab27cb;
 }
+
+
+.news-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    position: absolute;
+    bottom: 20px; /* Ajusta la posición vertical del botón */
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px 20px;
+    background-color: none; /* Color de fondo del botón */
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.679);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    z-index: 20;
+    
+}
+
+.news-button:hover {
+    background-color: #1263bb; /* Color de fondo en hover */
+}
+
 
 /* Dots del carrusel */
 .dots {
