@@ -32,7 +32,7 @@ body {
 /* Logo */
 .logo {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center; /* Alinea verticalmente el texto con la imagen */
     margin-bottom: 10px;
 }
@@ -65,8 +65,7 @@ body {
 .header .entidades .sernamp {
     height: 40px;
 }
-
-/* Carrusel */
+/* Estilos del Carrusel */
 .carousel {
     position: relative;
     max-width: 100%;
@@ -80,6 +79,7 @@ body {
 }
 
 .slide {
+    position: relative;
     min-width: 100%;
     height: 400px;
     background-size: cover;
@@ -89,8 +89,37 @@ body {
     align-items: center;
     color: white;
     font-size: 2rem;
+    z-index: 1;
 }
 
+.slide::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Capa de oscurecimiento */
+    z-index: 2; /* Asegura que la capa esté sobre la imagen pero debajo del texto */
+}
+
+.slide h2 {
+    position: absolute; /* Posiciona el h2 de manera absoluta dentro del slide */
+    top: 50%; /* Posiciona el texto a la mitad vertical del slide */
+    left: 50%; /* Posiciona el texto a la mitad horizontal del slide */
+    transform: translate(-50%, -50%); /* Centra el texto en ambas direcciones */
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 2rem; /* Tamaño de la fuente */
+    font-weight: 700; /* Peso de la fuente */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Sombra para mejor legibilidad */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 0 20px; /* Espacio horizontal dentro del texto */
+    box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
+    z-index: 3; /* Asegura que el texto esté sobre la capa de oscurecimiento */
+    color: #f2ab27db;
+}
+
+/* Dots del carrusel */
 .dots {
     text-align: center;
     margin-top: -40px;
@@ -110,6 +139,7 @@ body {
 .dot:hover {
     background-color: #555;
 }
+
 
 /* Tarjetas */
 .cards-section {
