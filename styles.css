@@ -286,7 +286,6 @@ body {
     font-size: 24px;
 }
 
-
 /*-----------------------FOOTER----------------------*/
 /* Estilos del Footer */
 .footer {
@@ -297,31 +296,57 @@ body {
     box-sizing: border-box; /* Asegura que padding no cause desplazamiento */
     position: relative; /* Asegura que el footer esté en su lugar */
     margin-top: 20px; /* Espacio superior para separar del contenido */
+    height: auto; /* Ajusta la altura del footer */
 }
 
 .footer-content {
-    max-width: 1200px; /* Ancho máximo del contenido */
-    margin: 0 auto; /* Centra el contenido en el footer */
+    width: 100%; /* Ancho máximo del contenido */
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px; /* Ajusta el espacio superior dentro del footer */
 }
 
 .footer p {
     margin: 0; /* Elimina márgenes por defecto */
     font-size: 14px; /* Ajusta el tamaño del texto */
     line-height: 1.5; /* Altura de línea para legibilidad */
+    color: rgba(255, 255, 255, 0.587);
 }
 
 .footer-logos {
-    margin-top: 15px; /* Espacio superior para separar el texto de los logos */
-    display: flex; /* Usa flexbox para alinear los logos */
-    justify-content: center; /* Centra los logos horizontalmente */
-    gap: 15px; /* Espacio entre los logos */
+    display: flex;
+    justify-content: center;
+    margin: 20px 0; /* Espacio alrededor de los logos */
 }
 
-.footer-logo {
-    height: 40px; /* Ajusta la altura de los logos */
-    width: auto; /* Mantiene la proporción de los logos */
-    display: block; /* Asegura que las imágenes se muestren correctamente */
+.footer-logos img {
+    height: 60px; /* Ajusta el tamaño de los logos */
+    margin: 0 10px; /* Espacio entre los logos */
 }
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    margin-top: 10px; /* Espacio superior para los íconos sociales */
+    margin-bottom: 40px;
+}
+
+.social-icon {
+    margin: 0 10px; /* Espacio entre los íconos */
+}
+
+.social-icon .svg {
+    height: 24px; /* Tamaño de los íconos */
+    transition: opacity 0.3s ease; /* Transición suave para el hover */
+    color: rgba(255, 255, 255, 0.789);
+}
+
+.social-icon .svg:hover {
+    opacity: 0.7; /* Efecto de hover para los íconos */
+}
+
 
 
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
