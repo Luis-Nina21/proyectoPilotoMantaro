@@ -256,6 +256,74 @@ body {
 
 
 
+/* Botón para regresar al top */
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background-color: #004d40e4; /* Color de fondo del botón */
+    color: white; /* Color del icono */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    text-decoration: none;
+    font-size: 24px;
+    z-index: 10000; /* Asegura que esté por encima de otros elementos */
+    transition: background-color 0.3s ease;
+}
+
+.scroll-to-top:hover {
+    background-color: #003d33; /* Color del botón al hacer hover */
+}
+
+/* Icono de flecha dentro del botón */
+.arrow-icon::before {
+    content: '▲'; /* Puedes usar un símbolo de flecha o una fuente de iconos como FontAwesome */
+    font-size: 24px;
+}
+
+
+/*-----------------------FOOTER----------------------*/
+/* Estilos del Footer */
+.footer {
+    background-color: #004d40e4; /* Color de fondo del footer */
+    color: white; /* Color del texto */
+    text-align: center; /* Centra el texto */
+    padding: 20px; /* Espacio interno */
+    box-sizing: border-box; /* Asegura que padding no cause desplazamiento */
+    position: relative; /* Asegura que el footer esté en su lugar */
+    margin-top: 20px; /* Espacio superior para separar del contenido */
+}
+
+.footer-content {
+    max-width: 1200px; /* Ancho máximo del contenido */
+    margin: 0 auto; /* Centra el contenido en el footer */
+}
+
+.footer p {
+    margin: 0; /* Elimina márgenes por defecto */
+    font-size: 14px; /* Ajusta el tamaño del texto */
+    line-height: 1.5; /* Altura de línea para legibilidad */
+}
+
+.footer-logos {
+    margin-top: 15px; /* Espacio superior para separar el texto de los logos */
+    display: flex; /* Usa flexbox para alinear los logos */
+    justify-content: center; /* Centra los logos horizontalmente */
+    gap: 15px; /* Espacio entre los logos */
+}
+
+.footer-logo {
+    height: 40px; /* Ajusta la altura de los logos */
+    width: auto; /* Mantiene la proporción de los logos */
+    display: block; /* Asegura que las imágenes se muestren correctamente */
+}
+
+
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
 @media screen and (max-width: 768px) {
     .header {

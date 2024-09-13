@@ -70,3 +70,11 @@ window.addEventListener('scroll', function() {
         document.body.style.paddingTop = '0'; // Eliminar el padding cuando el header no está fijo
     }
 });
+
+// script.js
+
+// Función para desplazar suavemente hacia el elemento con el id 'header'
+document.querySelector('.scroll-to-top').addEventListener('click', function(event) {
+    event.preventDefault();
+    document.querySelector('#header').scrollIntoView({ behavior: 'smooth' });
+});
