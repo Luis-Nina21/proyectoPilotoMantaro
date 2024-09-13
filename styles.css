@@ -136,7 +136,7 @@ body {
     padding: 0 20px; /* Espacio horizontal dentro del texto */
     box-sizing: border-box; /* Incluye el padding en el cálculo del ancho total */
     z-index: 3; /* Asegura que el texto esté sobre la capa de oscurecimiento */
-    color: #f2ab27cb;
+    color: #f2ab27da;
 }
 
 
