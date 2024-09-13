@@ -526,16 +526,22 @@ body {
         height: 40px; 
         flex-direction: row;
         justify-content: center;
+        margin-top: 0px;
+
     }
 
    
     .header .entidades .sernamp {
         height: 20px;
+        margin-top: 0px;
     }
     
 
     .thermometer-svg-container {
         width: 100%;
+    }
+    .logo{
+        margin-bottom: 0px;
     }
 
     .logo img {
