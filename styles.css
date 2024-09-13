@@ -9,8 +9,6 @@ body {
 /* Header */
 .header {
     display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
@@ -518,20 +516,23 @@ body {
 
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
 @media screen and (max-width: 768px) {
-    .header {
+    .header{
         flex-direction: column;
-        
+        height: auto;
     }
 
-    .buscador{
-        text-align: end;
-    }
+    
     .header .entidades{
         height: 40px; 
+        flex-direction: row;
+        justify-content: center;
     }
+
+   
     .header .entidades .sernamp {
         height: 20px;
     }
+    
 
     .thermometer-svg-container {
         width: 100%;
