@@ -14,15 +14,15 @@ body {
     padding: 10px 20px;
     background-color: #004d40e4;
     color: rgba(255, 255, 255, 0.66);
-    transition: all 0.3s ease-in-out; /* Transición suave */
-    position: relative; /* Para evitar desplazamiento horizontal */
+    transition: all 0.3s ease-in-out;
+    position: relative;
     width: 100%;
     height: 70px;
-    box-sizing: border-box; /* Asegura que padding y border no causen desplazamiento */
+    box-sizing: border-box;
 }
 
 .header.fixed {
-    position: fixed; /* Se fija en su lugar al hacer scroll */
+    position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -32,20 +32,18 @@ body {
 /* Logo */
 .logo {
     display: flex;
-    flex-direction: row;
-    align-items: center; /* Alinea verticalmente el texto con la imagen */
-    margin-bottom: 10px;
+    align-items: center;
 }
 
 .logo img {
-    margin-right: 10px; /* Ajusta el espacio entre la imagen y el texto */
-    width: 60px; /* Ajusta el tamaño de la imagen si es necesario */
+    margin-right: 10px;
+    width: 60px;
     height: auto;
 }
 
 .logo h1 {
-    margin: 0; /* Elimina cualquier margen que tenga el h1 por defecto */
-    font-size: 28px; /* Ajusta el tamaño de la fuente */
+    margin: 0;
+    font-size: 28px;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: 800;
     color: rgba(19, 176, 19, 0.843);
@@ -54,30 +52,98 @@ body {
 /* Entidades */
 .header .entidades {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
     align-items: center;
-    
 }
 
 .header .entidades img {
     height: 45px;
-    margin: 0 5px; /* Ajusta el margen para un espacio uniforme */
+    margin: 0 5px;
 }
 
 .header .entidades .sernamp {
     height: 25px;
 }
 
-.buscador {
-    display: none;
-   /* align-items: center;
-    margin-left: auto;  Asegura que el buscador esté a la derecha */
+/* Nav */
+.nav {
+    display: flex;
+    align-items: center;
 }
 
-.buscador svg {
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links li {
+    margin: 0 10px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #13b013;
+}
+
+/* Menú hamburguesa */
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
     cursor: pointer;
 }
+
+.nav-toggle .bar {
+    height: 3px;
+    width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #004d40e4;
+        width: 100%;
+        text-align: right;
+        padding: 10px 20px;
+    }
+
+    .nav-toggle {
+        display: flex;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+
+    .nav.active .nav-links {
+        display: flex;
+    }
+
+    .nav-links a {
+        padding: 10px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links a:last-child {
+        border-bottom: none;
+    }
+}
+
+
+
+
 
 
 
@@ -518,70 +584,6 @@ body {
 
 
 
-
-.nav {
-    position: relative;
-}
-
-.nav-links {
-    display: flex;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-.nav-links li {
-    margin: 0 1rem;
-}
-
-.nav-links a {
-    color: #fff; /* Color del texto del enlace */
-    text-decoration: none;
-    padding: 0.5rem 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #4CAF50; /* Color del texto en hover */
-}
-
-.nav-toggle {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.nav-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 3px 0;
-    transition: 0.3s;
-}
-
-/* Responsive Styles */
-@media (max-width: 768px) {
-    .nav-links {
-        display: none;
-        position: absolute;
-        top: 100%;
-        left: 0;
-        background-color: #333;
-        width: 100%;
-        flex-direction: column;
-        align-items: center;
-        padding: 1rem;
-        transition: max-height 0.3s ease;
-    }
-
-    .nav-links.show {
-        display: flex;
-    }
-
-    .nav-toggle {
-        display: flex;
-    }
-}
 
 
 
