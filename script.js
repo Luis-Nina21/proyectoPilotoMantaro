@@ -23,11 +23,13 @@ function showSlides() {
 
 
 //-----NAV ------------
-// JavaScript para el menú desplegable
-document.getElementById('navToggle').addEventListener('click', function() {
-    const navLinks = document.querySelector('.nav-links');
-    navLinks.classList.toggle('show');
+
+
+document.getElementById("navToggle").addEventListener("click", function() {
+    const nav = document.getElementById("navMenu");
+    nav.classList.toggle("active");
 });
+
 
 
 
