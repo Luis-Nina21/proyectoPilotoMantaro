@@ -514,6 +514,84 @@ body {
 }
 
 
+
+
+
+
+
+.nav {
+    position: relative;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 1rem;
+}
+
+.nav-links a {
+    color: #fff; /* Color del texto del enlace */
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #4CAF50; /* Color del texto en hover */
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.nav-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px 0;
+    transition: 0.3s;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #333;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+        transition: max-height 0.3s ease;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-toggle {
+        display: flex;
+    }
+}
+
+
+
+
+
+
+
+
+
+
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
 @media screen and (max-width: 768px) {
     .header{

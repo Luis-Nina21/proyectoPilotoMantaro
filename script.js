@@ -21,6 +21,16 @@ function showSlides() {
     setTimeout(showSlides, 5000); // Cambia la imagen cada 5 segundos
 }
 
+
+//-----NAV ------------
+// JavaScript para el menú desplegable
+document.getElementById('navToggle').addEventListener('click', function() {
+    const navLinks = document.querySelector('.nav-links');
+    navLinks.classList.toggle('show');
+});
+
+
+
 // Función para actualizar el índice de la diapositiva actual
 function currentSlide(n) {
     slideIndex = n;
@@ -96,3 +106,99 @@ setInterval(animateThermometer, 4000); // Cada 4 segundos (2 para llenar, 2 para
 
 
 
+
+/*------------VISUALIZACION DE DATOS HIDROLOGICOS------------*/
+// Función para generar datos aleatorios
+function getRandomData(min, max) {
+    return (Math.random() * (max - min) + min).toFixed(2);
+}
+
+// Configuración del gráfico de caudal
+const caudalCtx = document.getElementById('caudalChart').getContext('2d');
+const caudalChart = new Chart(caudalCtx, {
+    type: 'line',
+    data: {
+        labels: [], // Fechas o tiempos
+        datasets: [{
+            label: 'Caudal (m³/s)',
+            borderColor: 'rgba(75, 192, 192, 1)',
+            borderWidth: 2,
+            fill: false,
+            data: [] // Datos de caudal
+        }]
+    },
+    options: {
+        scales: {
+            x: { title: { display: true, text: 'Tiempo' } },
+            y: { title: { display: true, text: 'Caudal (m³/s)' } }
+        }
+    }
+});
+
+// Configuración del gráfico de calidad del agua
+const calidadAguaCtx = document.getElementById('calidadAguaChart').getContext('2d');
+const calidadAguaChart = new Chart(calidadAguaCtx, {
+    type: 'bar',
+    data: {
+        labels: [], // Fechas o tiempos
+        datasets: [{
+            label: 'Turbidez (NTU)',
+            backgroundColor: 'rgba(255, 99, 132, 0.6)',
+            borderColor: 'rgba(255, 99, 132, 1)',
+            borderWidth: 2,
+            data: [] // Datos de calidad del agua
+        }]
+    },
+    options: {
+        scales: {
+            x: { title: { display: true, text: 'Tiempo' } },
+            y: { title: { display: true, text: 'Turbidez (NTU)' } }
+        }
+    }
+});
+
+// Función para actualizar los gráficos con nuevos datos
+function updateCharts() {
+    const currentTime = new Date().toLocaleTimeString();
+
+    // Generar y agregar datos para el caudal
+    const caudalValue = getRandomData(40, 120);
+    caudalChart.data.labels.push(currentTime);
+    caudalChart.data.datasets[0].data.push(caudalValue);
+    if (caudalChart.data.labels.length > 10) {
+        caudalChart.data.labels.shift();
+        caudalChart.data.datasets[0].data.shift();
+    }
+    caudalChart.update();
+
+    // Generar y agregar datos para la calidad del agua
+    const calidadAguaValue = getRandomData(0, 5);
+    calidadAguaChart.data.labels.push(currentTime);
+    calidadAguaChart.data.datasets[0].data.push(calidadAguaValue);
+    if (calidadAguaChart.data.labels.length > 10) {
+        calidadAguaChart.data.labels.shift();
+        calidadAguaChart.data.datasets[0].data.shift();
+    }
+    calidadAguaChart.update();
+}
+
+// Actualizar los gráficos cada 3 segundos
+setInterval(updateCharts, 3000);
+
+// Mapa interactivo con Leaflet
+const map = L.map('map').setView([-15.642, -71.617], 10);
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+}).addTo(map);
+
+// Marcadores para las terrazas y canales
+const terrazas = [
+    { lat: -15.633, lon: -71.615, estado: 'Buena' },
+    { lat: -15.647, lon: -71.620, estado: 'Moderada' },
+    { lat: -15.638, lon: -71.630, estado: 'Crítica' }
+];
+
+terrazas.forEach(terraza => {
+    L.marker([terraza.lat, terraza.lon]).addTo(map)
+        .bindPopup(`<b>Terraza</b><br>Estado: ${terraza.estado}`);
+});
