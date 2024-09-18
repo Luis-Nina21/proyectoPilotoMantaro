@@ -21,11 +21,11 @@
     <!-- Nav principal -->
     <nav class="nav" id="navMenu">
         <ul class="nav-links">
-            <li><a href="#home">Inicio</a></li>
-            <li><a href="#about">Sobre Nosotros</a></li>
-            <li><a href="#projects">Proyectos</a></li>
-            <li><a href="#contact">Contacto</a></li>
-            <li><a href="#info">Información</a></li>
+            <li><a href="#home">Hidrometeorología</a></li> 
+            <li><a href="#about">Fauna</a></li>
+            <li><a href="#projects">Flora</a></li>
+            <li><a href="#projects">Turismo</a></li>
+            <li><a href="#contact">Acerca de nosotros</a></li>
         </ul>
         <!-- Icono hamburguesa -->
         <div class="nav-toggle" id="navToggle">
@@ -83,11 +83,10 @@
     
 
 
-      
-
+    <section class="info-section">
         <div class="thermometer-svg-container">
             <div class="titulo_clima">
-                <h2>Clima </h2>
+                <h2>Clima</h2>
             </div>
             <div>
                 <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16">
@@ -95,38 +94,36 @@
                     <path class="outline" d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1"/>
                     <path class="sun" d="M9.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5"/>
                 </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" border="1px" class="bi bi-thermometer-snow" viewBox="0 0 16 16">
+                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" class="bi bi-thermometer-snow" viewBox="0 0 16 16">
                     <path class="fill-blue" d="M5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585A1.5 1.5 0 0 1 5 12.5"/>
                     <path class="outline" d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1"/>
                     <path class="snowflake" d="M9.5 2a.5.5 0 0 1 .5.5v1.293l.646-.647a.5.5 0 0 1 .708.708L9 5.207v1.927l1.669-.963.495-1.85a.5.5 0 1 1 .966.26l-.237.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.884.237a.5.5 0 1 1-.26.966l-1.848-.495L9.5 8l1.669.963 1.849-.495a.5.5 0 1 1 .258.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.237.883a.5.5 0 1 1-.966.258L10.67 9.83 9 8.866v1.927l1.354 1.353a.5.5 0 0 1-.708.708L9 12.207V13.5a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5"/>
                 </svg>
                 <h3>15°C <svg xmlns="http://www.w3.org/2000/svg" padding-bottom="10px" color="red" width="16" height="16" fill="currentColor" class="bi bi-caret-down-square-fill" viewBox="0 0 16 16">
                     <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6z"/>
-                  </svg></h3>
-                
+                </svg></h3>
             </div>
-            
         </div>
-
-        <div>
-            
-             <!-- Caudal del Río -->
-    <div class="chart-container">
-        <h4>Caudal del Río Colca (m³/s)</h4>
-        <canvas id="caudalChart"></canvas>
-    </div>
-    
-    <!-- Calidad del Agua -->
-    <div class="chart-container">
-        <h4>Calidad del Agua (Turbidez)</h4>
-        <canvas id="calidadAguaChart"></canvas>
-    </div>
-    
-    <!-- Mapa Interactivo -->
-    <h4>Mapa de Terrazas y Canales de Riego</h4>
-    <div id="map"></div>
-
+        
+        <!-- Caudal del Río -->
+        <div class="info-card">
+            <h4>Caudal de la cuenca del Mantaro (m³/s)</h4>
+            <div class="caudal-data">
+                <p class="caudal-number">350 m³/s</p>
+               <canvas id="caudalChart"></canvas>
+            </div>
         </div>
+        
+        <!-- Calidad del Agua -->
+        <div class="info-card calidad-card">
+            <h4>Calidad del Agua (Turbidez)</h4>
+            <div class="calidad-image">
+                <img src="path-to-quality-image.jpg" alt="Calidad del Agua">
+            </div>
+        </div>
+    </section>
+    
+    
 
     <!-- Sección de tarjetas -->
     <section class="cards-section">
