@@ -542,7 +542,6 @@ body {
 
 /*----------------BUCLE DEL TERMOMETRO----------------*/
 
-
 .titulo_clima h2 {
     font-size: 30px;
     margin: 10px;
@@ -617,8 +616,7 @@ body {
 /* Estilos para la sección de información y tarjetas */
 .info-section {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
+    flex-direction: row; /* Alineación horizontal de las tarjetas */
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
@@ -626,7 +624,7 @@ body {
 
 .info-card {
     flex: 1 1 30%;
-    min-width: 280px; /* Asegura que las tarjetas no sean demasiado pequeñas en pantallas pequeñas */
+    min-width: 280px; /* Asegura que las tarjetas no sean demasiado pequeñas en pantallas grandes */
     box-sizing: border-box;
     padding: 20px;
     background-color: transparent; /* Fondo blanco eliminado */
@@ -668,11 +666,15 @@ body {
 }
 
 @media (max-width: 768px) {
+    .info-section {
+        flex-direction: column; /* Las tarjetas se apilan verticalmente cuando se hace responsive */
+        align-items: center;
+    }
+
     .info-card {
-        flex: 1 1 100%; /* Ocupa el tamaño completo del ancho en pantallas pequeñas */
+        flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho de la pantalla en responsive */
     }
 }
-
 
 
 
