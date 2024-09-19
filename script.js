@@ -70,19 +70,55 @@ function openInfo(type) {
                 
                 <h3>Pueblo de Jauja</h3>
                 <p>Jauja es la primera capital del Perú fundada por los españoles. Esta ciudad está situada a una altura de 3390 m.s.n.m. y durante los 12 meses del año se celebran diferentes fiestas costumbristas, patronales, religiosas y cívicas. En esta ciudad tenemos a la Iglesia Matriz “Santa Fe” de Jauja que cuenta con un hermoso tallado y dentro de este espacio podemos encontrar un altar al Señor de la Justicia. </p>
-                <img src="./imagenes/PuebloJauja.png" alt="Lugar Turístico 2" class="turismo-img">
+                <img src="./imagenes/PuebloJauja.jpg" alt="Lugar Turístico 2" class="turismo-img">
             
                 <h3>Nevado Huaytapallana</h3>
                 <p>El Huaytapallana pertenece a la cordillera del mismo nombre. Cuenta con una altura de 5,200 m.s.n.m. y la nieve de sus picos nutre las aguas del Río Mantaro, que al mismo tiempo brinda de agua potable a todos los pobladores del valle del Mantaro. Su nombre significa “lugar donde se recolectan flores” y se le reconoce de esta forma por la actividad que se realiza cada año en la víspera de la fiesta de Tayta Shanti </p>
                 <img src="./imagenes/NevadoHuaytapallana.png" alt="Lugar Turístico 2" class="turismo-img">
                 <h3>Torre Torre</h3>
                 <p>Torre Torre es el nombre que se le dio a formaciones rocosas ubicadas cerca a la ciudad de Huancayo. Se le conoce también como la chimenea de hadas y puedes llegar a medir 30 metros de altura. Por su composición de tierra arcillosa se encuentra en constate transformación.</p>
-                <img src="./imagenes/TorreTorre.png" alt="Lugar Turístico 2" class="turismo-img">
+                <img src="./imagenes/TorreTorre.jpg" alt="Lugar Turístico 2" class="turismo-img">
             
                 </div>
 
             <div class="turismo-region">
-                <h2>Región 2</h2>
+                <h2>Pasco</h2>
+                <h3>Lugar Turístico 3</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="./imagenes/faunaMantaro.png" alt="Lugar Turístico 3" class="turismo-img">
+
+                <h3>Lugar Turístico 4</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen4.jpg" alt="Lugar Turístico 4" class="turismo-img">
+            </div>
+
+
+            <div class="turismo-region">
+                <h2>Huancavelica</h2>
+                <h3>Lugar Turístico 3</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="./imagenes/faunaMantaro.png" alt="Lugar Turístico 3" class="turismo-img">
+
+                <h3>Lugar Turístico 4</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen4.jpg" alt="Lugar Turístico 4" class="turismo-img">
+            </div>
+
+
+            <div class="turismo-region">
+                <h2>Ayacucho</h2>
+                <h3>Lugar Turístico 3</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="./imagenes/faunaMantaro.png" alt="Lugar Turístico 3" class="turismo-img">
+
+                <h3>Lugar Turístico 4</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen4.jpg" alt="Lugar Turístico 4" class="turismo-img">
+            </div>
+
+
+            <div class="turismo-region">
+                <h2>Lima</h2>
                 <h3>Lugar Turístico 3</h3>
                 <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
                 <img src="./imagenes/faunaMantaro.png" alt="Lugar Turístico 3" class="turismo-img">
