@@ -171,6 +171,9 @@ body {
     .buscador {
         display: none;
     }
+    .ayuda{
+        display: none;
+    }
     
     .nav-toggle {
         display: flex;
