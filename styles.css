@@ -614,7 +614,7 @@ body {
 
 /* Estilo general para las tarjetas de información */
 .info-card {
-    background: #fff;
+    background: black;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
@@ -625,6 +625,8 @@ body {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    position: relative; /* Necesario para el before */
+    overflow: hidden; /* Para que el fondo no se desborde */
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     box-sizing: border-box; /* Asegura que el padding y border no agranden el tamaño */
 }
@@ -637,26 +639,19 @@ body {
 .info-card h4 {
     font-size: 18px;
     margin-bottom: 15px;
-    color: #333;
+    color: #fff; /* Cambiado a blanco para que contraste con el fondo oscuro */
+    z-index: 2; /* Asegura que el texto esté por encima del fondo */
 }
 
-.caudal-number,
-.turbidez-dato {
+/* Estilo del número de caudal */
+.caudal-number {
+    color: #fff; /* Cambiado a blanco para que contraste con el fondo oscuro */
     font-size: 36px;
     font-weight: bold;
     margin: 20px 0;
     word-wrap: break-word; /* Evita que el texto se desborde */
     line-height: 1.2;
-}
-
-/* Estilo del número de caudal */
-.caudal-number {
-    color: #2e7d32; /* Verde oscuro */
-}
-
-/* Estilo del dato de turbidez */
-.turbidez-dato {
-    color: #1976d2; /* Azul oscuro */
+    z-index: 2; /* Asegura que el número esté por encima del fondo */
 }
 
 /* Contenedor de los datos de caudal */
@@ -666,6 +661,29 @@ body {
     align-items: center;
     justify-content: center;
 }
+
+/* Fondo de la tarjeta con imagen y oscurecimiento */
+.info-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('./imagenes/CalidadAgua.jpg'); /* Reemplaza con la URL de la imagen que desees */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5; /* Oscurece el fondo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Efecto de oscurecimiento y zoom */
+}
+
+/* Efecto de zoom al hacer hover */
+.info-card:hover::before {
+    opacity: 0.7; /* Oscurecimiento mayor al hacer hover */
+    transform: scale(1.1); /* Efecto de zoom */
+}
+
 
 /* Estilo de la imagen en la tarjeta de calidad del agua */
 .calidad-image img {
