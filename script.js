@@ -206,3 +206,62 @@ terrazas.forEach(terraza => {
     L.marker([terraza.lat, terraza.lon]).addTo(map)
         .bindPopup(`<b>Terraza</b><br>Estado: ${terraza.estado}`);
 });
+
+
+
+//---------SCROLL TOP
+
+// Función para actualizar el valor de caudal
+function updateCaudal() {
+    const caudalNumber = document.querySelector('.caudal-number');
+    let value = 350; // Valor inicial
+
+    function animateCaudal() {
+        if (value <= 400) { // Valor máximo para la animación
+            caudalNumber.textContent = `${value} m³/s`;
+            value += 1; // Incremento del valor
+            requestAnimationFrame(animateCaudal);
+        }
+    }
+
+    animateCaudal();
+}
+
+// Función para actualizar el valor de turbidez
+function updateTurbidez() {
+    const turbidezDato = document.querySelector('.turbidez-dato');
+    let value = 3.2; // Valor inicial
+
+    function animateTurbidez() {
+        if (value <= 5) { // Valor máximo para la animación
+            turbidezDato.textContent = `Turbidez: ${value.toFixed(1)} NTU`;
+            value += 0.1; // Incremento del valor
+            requestAnimationFrame(animateTurbidez);
+        }
+    }
+
+    animateTurbidez();
+}
+
+// Detectar cuando las tarjetas están en el viewport
+function handleScroll() {
+    const caudalCard = document.querySelector('.info-card');
+    const calidadCard = document.querySelector('.calidad-card');
+    
+    const rectCaudal = caudalCard.getBoundingClientRect();
+    const rectCalidad = calidadCard.getBoundingClientRect();
+    
+    const isCaudalVisible = rectCaudal.top < window.innerHeight && rectCaudal.bottom >= 0;
+    const isCalidadVisible = rectCalidad.top < window.innerHeight && rectCalidad.bottom >= 0;
+    
+    if (isCaudalVisible) {
+        updateCaudal();
+    }
+    
+    if (isCalidadVisible) {
+        updateTurbidez();
+    }
+}
+
+window.addEventListener('scroll', handleScroll);
+handleScroll(); // Llamar la función al cargar la página

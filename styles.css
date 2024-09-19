@@ -618,68 +618,65 @@ body {
 /* Estilos para la sección de información y tarjetas */
 .info-section {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row; /* Alineación horizontal de las tarjetas */
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
 }
-
+/* Estilo general para las tarjetas de información */
 .info-card {
-    flex: 1 1 30%;
-    min-width: 280px; /* Asegura que las tarjetas no sean demasiado pequeñas en pantallas grandes */
-    box-sizing: border-box;
-    padding: 20px;
-    background-color: transparent; /* Fondo blanco eliminado */
+    background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.info-card h4 {
-    margin: 0;
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-}
-
-.info-card .caudal-value {
-    font-size: 48px; /* Tamaño del número del caudal */
-    font-weight: 900;
-    color: #388e3c; /* Color verde para el número del caudal */
-}
-
-.calidad-card {
+    padding: 20px;
+    margin: 10px;
+    flex: 1;
+    text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.calidad-card .calidad-image {
-    position: relative;
+.info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.info-card h4 {
+    font-size: 18px;
+    margin-bottom: 15px;
+    color: #333;
+}
+
+.caudal-number {
+    font-size: 36px;
+    font-weight: bold;
+    color: #2e7d32; /* Verde oscuro */
+    margin: 20px 0;
+}
+
+.turbidez-dato {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1976d2; /* Azul oscuro */
+    margin: 20px 0;
+}
+
+.caudal-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.calidad-image img {
     width: 100%;
-    height: 200px; /* Ajusta el alto según sea necesario */
-    
-}
-
-.calidad-card .calidad-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    border-radius: 10px;
-    position: absolute;
-}
-
-@media (max-width: 768px) {
-    .info-section {
-        flex-direction: column; /* Las tarjetas se apilan verticalmente cuando se hace responsive */
-        align-items: center;
-    }
-
-    .info-card {
-        flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho de la pantalla en responsive */
-    }
-    .buscador{
-        display: none;
-    }
+    max-width: 150px;
+    border-radius: 8px;
+    margin-top: 10px;
 }
 
 
@@ -695,12 +692,6 @@ body {
     border-radius: 50%;
     margin-bottom: 20px;
 }
-
-
-
-
-
-
 
 
 
