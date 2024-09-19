@@ -112,8 +112,9 @@ body {
 .nav-toggle .bar {
     height: 5px;
     width: 100%;
-    background-color: rgba(19, 176, 19, 0.843);;
+    background-color: rgba(19, 176, 19, 0.843);
     border-radius: 10px;
+    
 }
 
 /* Estilos para el despliegue en toda la pantalla */
