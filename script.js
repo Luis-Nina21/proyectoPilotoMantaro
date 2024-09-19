@@ -58,12 +58,53 @@ function openInfo(type) {
     } else if (type === 'caudal') {
         infoContent = "<h3>Caudal del Río Mantaro</h3><p>El caudal del río actualmente es de 200 m³/s según los datos simulados en tiempo real proporcionados por el gobierno.</p>";
     } else if (type === 'turismo') {
-        infoContent = "<h3>Lugares Turísticos</h3><p>Entre los lugares turísticos más visitados destacan el Puente Colgante de Huancayo y las Termas de Churín...</p>";
+        infoContent = `
+            <h3>Lugares Turísticos de la Cuenca del Río Mantaro</h3>
+
+            <h2>Región 1</h2>
+            <div class="turismo-region">
+                <h3>Lugar Turístico 1</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen1.jpg" alt="Lugar Turístico 1" class="turismo-img">
+                
+                <h3>Lugar Turístico 2</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen2.jpg" alt="Lugar Turístico 2" class="turismo-img">
+            </div>
+
+            <h2>Región 2</h2>
+            <div class="turismo-region">
+                <h3>Lugar Turístico 3</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="./imagenes/faunaMantaro.png" alt="Lugar Turístico 3" class="turismo-img">
+
+                <h3>Lugar Turístico 4</h3>
+                <p>Descripción breve del lugar turístico, su ubicación y qué lo hace especial.</p>
+                <img src="ruta/a/la/imagen4.jpg" alt="Lugar Turístico 4" class="turismo-img">
+            </div>
+
+            <!-- Agrega más regiones y lugares turísticos según sea necesario -->
+
+            <style>
+                .turismo-region {
+                    text-align: center;
+                    margin: 20px 0;
+                }
+                .turismo-img {
+                    width: 80%;
+                    max-width: 400px;
+                    height: auto;
+                    border-radius: 8px;
+                    margin-top: 10px;
+                }
+            </style>
+        `;
     }
 
     document.getElementById("modalInfo").innerHTML = infoContent;
     document.getElementById("infoModal").style.display = "block";
 }
+
 
 function closeModal() {
     document.getElementById("infoModal").style.display = "none";
