@@ -483,8 +483,11 @@ body {
 /*-----------------------FOOTER----------------------*/
 /* Estilos del Footer */
 .footer {
-    background-color: rgba(19, 176, 19, 0.843); /* Color de fondo del footer */
-    color: white; /* Color del texto */
+    background: linear-gradient(
+        to bottom,
+        rgba(19, 176, 19, 0.6), /* Color más oscuro */        /* Dirección del gradiente: de arriba hacia abajo */
+        rgba(19, 176, 19, 0.843) /* Color claro */
+    );    color: white; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 20px; /* Espacio interno */
     box-sizing: border-box; /* Asegura que padding no cause desplazamiento */
