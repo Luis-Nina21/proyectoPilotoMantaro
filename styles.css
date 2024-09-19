@@ -23,6 +23,8 @@ body {
 
 .header.fixed {
     position: fixed;
+    flex-direction: row;
+    align-items: center;
     top: 0;
     left: 0;
     z-index: 1000;
@@ -101,7 +103,7 @@ body {
     flex-direction: column;
     justify-content: space-between;
     width: 30px;
-    height: 21px;
+    height: 25px;
     cursor: pointer;
     position: relative;
     z-index: 1001; /* Asegura que esté por encima de todo */
