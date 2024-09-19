@@ -674,6 +674,9 @@ body {
     .info-card {
         flex: 1 1 100%; /* Las tarjetas ocupan todo el ancho de la pantalla en responsive */
     }
+    .buscador{
+        display: none;
+    }
 }
 
 
