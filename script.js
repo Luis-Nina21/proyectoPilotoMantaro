@@ -66,7 +66,7 @@ function openInfo(type) {
 
                 <h3>Laguna de paca</h3>
                 <p>En la ciudad de Jauja encontramos a uno de sus principales atractivos que es la laguna de Paca. Este lugar ofrece hermosos paisajes y está rodeada de bosquecillos de totora y recreos de esparcimiento turístico.</p>
-                <img src="./imagenes/LagunaPaca.png" alt="Lugar Turístico 1" class="turismo-img">
+                <img src="./imagenes/LagunaPaca.jpg" alt="Lugar Turístico 1" class="turismo-img">
                 
                 <h3>Pueblo de Jauja</h3>
                 <p>Jauja es la primera capital del Perú fundada por los españoles. Esta ciudad está situada a una altura de 3390 m.s.n.m. y durante los 12 meses del año se celebran diferentes fiestas costumbristas, patronales, religiosas y cívicas. En esta ciudad tenemos a la Iglesia Matriz “Santa Fe” de Jauja que cuenta con un hermoso tallado y dentro de este espacio podemos encontrar un altar al Señor de la Justicia. </p>
