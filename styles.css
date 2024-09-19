@@ -612,6 +612,44 @@ body {
     padding: 20px;
 }
 
+#climayconcepto {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 20px;
+}
+
+.thermometer-svg-container,
+.conceptoMantaro {
+    flex: 1;
+}
+
+.thermometer-svg-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.conceptoMantaro {
+    text-align: left;
+    font-size: 12pt;
+    color: #555;
+}
+.conceptoMantaro h2{
+    color: #000;
+}
+
+@media (max-width: 768px) {
+    #climayconcepto {
+        flex-direction: column;
+    }
+
+    .thermometer-svg-container,
+    .conceptoMantaro {
+        margin-bottom: 20px;
+    }
+}
 
 
 .thermometer-svg-container{
@@ -709,7 +747,7 @@ body {
     .sernamp{
         height: 40px;
     }
-    
+   
 }
 
 
