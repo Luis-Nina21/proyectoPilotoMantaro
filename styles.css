@@ -7,6 +7,7 @@ body {
 }
 
 /* Header */
+/* Header */
 .header {
     display: flex;
     justify-content: space-between;
@@ -16,6 +17,7 @@ body {
     color: rgba(255, 255, 255, 0.66);
     position: relative;
     width: 100%;
+    max-width: 100vw; /* Limita el ancho del header a la pantalla */
     height: 70px;
     box-sizing: border-box;
     transition: box-shadow 0.3s ease; /* Añadido para la transición suave */
@@ -27,6 +29,7 @@ body {
     left: 0;
     z-index: 1000;
     width: 100%;
+    max-width: 100vw; /* Asegura que el header no sobrepase la pantalla */
     box-shadow: 0 4px 8px rgba(56, 142, 60, 0.321); /* Sombra suave de color verde */
 }
 
@@ -110,7 +113,7 @@ body {
 .nav-toggle .bar {
     height: 3px;
     width: 100%;
-    background-color: rgba(19, 176, 19, 0.843);;
+    background-color: rgba(19, 176, 19, 0.843);
     border-radius: 10px;
 }
 
@@ -151,14 +154,28 @@ body {
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
+    .header {
+        padding: 10px;
+    }
+    
+    .logo img {
+        max-width: 50px; /* Reduce el tamaño del logo en pantallas pequeñas */
+    }
+
+    .logo h1 {
+        font-size: 24px; /* Ajusta el tamaño de la fuente del logo */
+    }
+
     .nav-links {
         display: none;
         margin: 0px;
     }
-    .nav-links a{
+
+    .nav-links a {
         font-size: 1.5rem;
     }
-    .nav-links a:hover{
+
+    .nav-links a:hover {
         background-color: #13b013;
         color: white;
         padding-top: 5px;
@@ -166,18 +183,21 @@ body {
         padding-left: 20px;
         padding-right: 20px;
     }
-    
+
     .nav-toggle {
         display: flex;
         position: absolute;
-        right: 20px;
-        top: 20px;
+        right: 10px; /* Ajusta la posición para que no se desborde */
+        top: 10px;
     }
 
     .nav.active .nav-links {
         display: flex;
     }
 }
+
+
+
 
 
 
@@ -449,29 +469,6 @@ body {
 
 
 
-/* Botón para regresar al top */
-.scroll-to-top {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 60px;
-    height: 60px;
-    background-color: #f2ab27ed; /* Color de fondo del botón */
-    color: white; /* Color del icono */
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    text-decoration: none;
-    font-size: 24px;
-    z-index: 10000; /* Asegura que esté por encima de otros elementos */
-    transition: background-color 0.3s ease;
-}
-
-.scroll-to-top:hover {
-    background-color: #f2ab27b1; /* Color del botón al hacer hover */
-}
 
 /* Icono de flecha dentro del botón */
 .arrow-icon::before {
@@ -511,14 +508,17 @@ body {
 
 .footer-logos {
     display: flex;
+    
     justify-content: center;
     margin: 20px 0; /* Espacio alrededor de los logos */
 }
 
 .footer-logos img {
-    height: 60px; /* Ajusta el tamaño de los logos */
-    margin: 0 10px; /* Espacio entre los logos */
+    height: 50px; /* Ajusta el tamaño de los logos */
 }
+    .sernamp{
+        height: 40px;
+    }
 
 .social-icons {
     display: flex;
@@ -619,25 +619,26 @@ body {
 .info-section {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: row; /* Alineación horizontal de las tarjetas */
     justify-content: space-around;
     gap: 20px;
     padding: 20px;
 }
+
 /* Estilo general para las tarjetas de información */
 .info-card {
     background: #fff;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     padding: 20px;
-    margin: 10px;
-    flex: 1;
+    flex: 1 1 calc(33.333% - 40px); /* Ajusta el tamaño de las tarjetas en pantallas grandes */
+    max-width: 100%; /* Evita que las tarjetas sobrepasen el borde */
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-sizing: border-box; /* Asegura que el padding y border no agranden el tamaño */
 }
 
 .info-card:hover {
@@ -651,20 +652,26 @@ body {
     color: #333;
 }
 
-.caudal-number {
-    font-size: 36px;
-    font-weight: bold;
-    color: #2e7d32; /* Verde oscuro */
-    margin: 20px 0;
-}
-
+.caudal-number,
 .turbidez-dato {
     font-size: 36px;
     font-weight: bold;
-    color: #1976d2; /* Azul oscuro */
     margin: 20px 0;
+    word-wrap: break-word; /* Evita que el texto se desborde */
+    line-height: 1.2;
 }
 
+/* Estilo del número de caudal */
+.caudal-number {
+    color: #2e7d32; /* Verde oscuro */
+}
+
+/* Estilo del dato de turbidez */
+.turbidez-dato {
+    color: #1976d2; /* Azul oscuro */
+}
+
+/* Contenedor de los datos de caudal */
 .caudal-data {
     display: flex;
     flex-direction: column;
@@ -672,6 +679,7 @@ body {
     justify-content: center;
 }
 
+/* Estilo de la imagen en la tarjeta de calidad del agua */
 .calidad-image img {
     width: 100%;
     max-width: 150px;
@@ -679,8 +687,16 @@ body {
     margin-top: 10px;
 }
 
+/* Hacer que las tarjetas sean responsivas en pantallas pequeñas */
+@media (max-width: 768px) {
+    .info-card {
+        flex: 1 1 100%; /* Ocupar el 100% del ancho en pantallas pequeñas */
+    }
+}
 
 
+.videoMantaro{
+}
 
 
 
@@ -778,6 +794,10 @@ body {
     }
     .card-content p{
         font-size: 13px;
+    }
+
+    .videoMantaro{
+        width: 80%;
     }
 
 
