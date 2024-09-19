@@ -265,3 +265,9 @@ function handleScroll() {
 
 window.addEventListener('scroll', handleScroll);
 handleScroll(); // Llamar la función al cargar la página
+
+
+
+
+
+
