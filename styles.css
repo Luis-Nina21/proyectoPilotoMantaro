@@ -12,7 +12,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: #004d40e4;
+    background-color: rgb(240, 255, 243);
     color: rgba(255, 255, 255, 0.66);
     position: relative;
     width: 100%;
@@ -108,7 +108,7 @@ body {
 .nav-toggle .bar {
     height: 3px;
     width: 100%;
-    background-color: white;
+    background-color: rgba(19, 176, 19, 0.843);;
     border-radius: 10px;
 }
 
