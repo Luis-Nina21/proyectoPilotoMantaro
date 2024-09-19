@@ -12,12 +12,13 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background-color: rgb(240, 255, 243);
+    background-color: rgb(245, 253, 247);
     color: rgba(255, 255, 255, 0.66);
     position: relative;
     width: 100%;
     height: 70px;
     box-sizing: border-box;
+    transition: box-shadow 0.3s ease; /* Añadido para la transición suave */
 }
 
 .header.fixed {
@@ -26,6 +27,7 @@ body {
     left: 0;
     z-index: 1000;
     width: 100%;
+    box-shadow: 0 4px 8px rgba(56, 142, 60, 0.338); /* Sombra suave de color verde */
 }
 
 /* Logo */
