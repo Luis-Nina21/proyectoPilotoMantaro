@@ -150,6 +150,7 @@ body {
 .nav-links a {
     font-size: 15px;
     margin-bottom: 20px;
+    
 }
 
 /* Estilos para pantallas pequeñas */
@@ -472,7 +473,7 @@ body {
 /*-----------------------FOOTER----------------------*/
 /* Estilos del Footer */
 .footer {
-    background-color: rgba(19, 176, 19, 0.843); /* Color de fondo del footer */
+    background-color: rgba(16, 162, 16, 0.843); /* Color de fondo del footer */
     color: white; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 20px; /* Espacio interno */

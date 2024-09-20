@@ -134,13 +134,16 @@ function openInfo(type) {
             <style>
                 .tituloAtractivos{
                 color: rgba(19, 176, 19, 0.843);
-                text-align: center;
+                text-align:center;
                 font-weight:800;
                 font-size: 25px;
+                margin-top:0;
+                margin-bottom:0;
                 }
                 .turismo-region {
                     text-align: center;
                     margin: 25px 0;
+                    margin-top:0;
                     padding: 15px;
                 }
                 .turismo-img {
