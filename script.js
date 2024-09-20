@@ -74,7 +74,8 @@ function openInfo(type) {
             
                 <h3>Nevado Huaytapallana</h3>
                 <p>El Huaytapallana pertenece a la cordillera del mismo nombre. Cuenta con una altura de 5,200 m.s.n.m. y la nieve de sus picos nutre las aguas del Río Mantaro, que al mismo tiempo brinda de agua potable a todos los pobladores del valle del Mantaro. Su nombre significa “lugar donde se recolectan flores” y se le reconoce de esta forma por la actividad que se realiza cada año en la víspera de la fiesta de Tayta Shanti </p>
-                <img src="./imagenes/NevadoHuaytapallana.png" alt="Lugar Turístico 2" class="turismo-img">
+                <img src="./imagenes/NevadoHuaytapallana.jpg" alt="Lugar Turístico 2" class="turismo-img">
+                
                 <h3>Torre Torre</h3>
                 <p>Torre Torre es el nombre que se le dio a formaciones rocosas ubicadas cerca a la ciudad de Huancayo. Se le conoce también como la chimenea de hadas y puedes llegar a medir 30 metros de altura. Por su composición de tierra arcillosa se encuentra en constate transformación.</p>
                 <img src="./imagenes/TorreTorre.jpg" alt="Lugar Turístico 2" class="turismo-img">
@@ -135,7 +136,7 @@ function openInfo(type) {
                 color: rgba(19, 176, 19, 0.843);
                 text-align: center;
                 font-weight:800;
-                font-size: 20px;
+                font-size: 25px;
                 }
                 .turismo-region {
                     text-align: center;
