@@ -473,7 +473,7 @@ body {
 /*-----------------------FOOTER----------------------*/
 /* Estilos del Footer */
 .footer {
-    background-color: rgba(16, 162, 16, 0.843); /* Color de fondo del footer */
+    background-color: rgba(12, 149, 12, 0.874); /* Color de fondo del footer */
     color: white; /* Color del texto */
     text-align: center; /* Centra el texto */
     padding: 20px; /* Espacio interno */
@@ -494,6 +494,7 @@ body {
 
 .footer p {
     margin: 0; /* Elimina márgenes por defecto */
+    text-align: center;
     font-size: 14px; /* Ajusta el tamaño del texto */
     line-height: 1.5; /* Altura de línea para legibilidad */
     color: rgba(255, 255, 255, 0.587);
@@ -509,7 +510,6 @@ body {
 .footer-logos img {
     height: 50px; /* Ajusta el tamaño de los logos */
 }
- 
 .social-icons {
     display: flex;
     justify-content: center;
@@ -519,16 +519,17 @@ body {
 
 .social-icon {
     margin: 0 10px; /* Espacio entre los íconos */
+    color: rgba(255, 255, 255, 0.587);
 }
 
 .social-icon .svg {
-    height: 24px; /* Tamaño de los íconos */
+    height: 32px; /* Tamaño de los íconos */
+    width: 32px; /* Asegura el mismo tamaño para todos los íconos */
     transition: opacity 0.3s ease; /* Transición suave para el hover */
-    color: rgba(255, 255, 255, 0.789);
 }
 
 .social-icon .svg:hover {
-    opacity: 0.7; /* Efecto de hover para los íconos */
+    opacity: 0.8; /* Efecto hover */
 }
 
 
