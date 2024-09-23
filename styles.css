@@ -19,6 +19,7 @@ body {
     z-index: 99999;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.2); /* Sombra suave */
     height: auto; /* Permite que el contenedor crezca según el contenido */
+    box-sizing: border-box; /* Asegura que el padding y border no rompan el layout */
 }
 
 #cookie-banner p {
@@ -78,6 +79,7 @@ body {
         margin: 0; /* Elimina cualquier margen lateral */
         box-shadow: 6px 6px 6px 15px rgba(86, 87, 86, 0.251); /* Sombra suave */
         border-radius: 10px;
+        box-sizing: border-box; /* Asegura que el padding y border no rompan el layout */
     }
 
     .btn-cookies {
@@ -91,7 +93,6 @@ body {
         padding: 10px;
     }
 }
-
 
 
 

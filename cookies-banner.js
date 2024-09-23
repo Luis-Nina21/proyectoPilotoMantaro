@@ -1,4 +1,3 @@
-/*----------ESTE CÓDIGO JS ES PARA EL MENSAJE DE COOKIES*/
 document.addEventListener("DOMContentLoaded", function() {
     // Muestra el banner de cookies solo si no ha sido aceptado ni cancelado previamente en esta sesión
     if (!sessionStorage.getItem("cookiesDecision")) {
@@ -42,12 +41,14 @@ function cancelCookies() {
 document.getElementById("accept-btn").addEventListener("click", acceptCookies);
 document.getElementById("cancel-btn").addEventListener("click", cancelCookies);
 
-// Desplazamiento suave del banner con el scroll
+// Efecto de movimiento sutil sin modificar el centrado
 window.addEventListener("scroll", function() {
     var cookieBanner = document.getElementById("cookie-banner");
-    var scrollY = window.scrollY || window.pageYOffset; // Obtener la posición del scroll actual
-    var bannerHeight = cookieBanner.offsetHeight;
+
+    // Mantener el banner centrado aplicando una ligera oscilación vertical
+    var scrollY = window.scrollY || window.pageYOffset;
+    var oscillation = Math.sin(scrollY * 0.05) * 3; // Oscilación leve (3px) para no alterar el centrado
     
-    // Actualiza la posición del banner para que se mueva con el scroll
-    cookieBanner.style.transform = `translateY(${scrollY}px)`;
+    // Mantiene el banner centrado y aplica el movimiento leve con transform
+    cookieBanner.style.transform = `translate(-50%, ${oscillation}px)`;
 });
