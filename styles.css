@@ -18,7 +18,7 @@ body {
     padding: 10px;
     text-align: center;
     z-index: 99999; /* Asegura que esté por encima de todo */
-    height: 185px;
+    height: auto;
 }
 
 #cookie-banner p {
