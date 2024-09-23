@@ -87,7 +87,7 @@ body {
         flex-direction: column;
         gap: 10px; /* Espacio entre los botones en dispositivos pequeños */
         flex-wrap: nowrap; /* Asegura que los botones se apilen verticalmente */
-        margin-top: 10px;
+        margin-top: 0px;
     }
 
     #accept-btn, #cancel-btn {
