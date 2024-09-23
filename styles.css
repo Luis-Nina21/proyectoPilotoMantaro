@@ -22,6 +22,7 @@ body {
     box-sizing: border-box; /* Asegura que el padding y border no rompan el layout */
 }
 
+/* Texto dentro del banner */
 #cookie-banner p {
     text-align: left;
     padding: 20px;
@@ -63,12 +64,6 @@ body {
 
 /* Responsividad */
 @media (max-width: 768px) {
-    #cookie-banner p {
-        font-size: 14px;
-        padding: 10px;
-    }
-
-    /* Centrado en el medio de la pantalla en pantallas pequeñas */
     #cookie-banner {
         width: 90%; /* Ajusta el ancho en pantallas pequeñas */
         height: auto; /* Permite que el contenedor crezca según el contenido */
@@ -82,15 +77,29 @@ body {
         box-sizing: border-box; /* Asegura que el padding y border no rompan el layout */
     }
 
+    #cookie-banner p {
+        font-size: 14px;
+        padding: 10px;
+    }
+
     .btn-cookies {
         flex-direction: column;
-        gap: 10px; /* Espacio entre el logo y los botones en dispositivos pequeños */
+        gap: 10px; /* Espacio entre los botones en dispositivos pequeños */
         flex-wrap: nowrap; /* Asegura que los botones se apilen verticalmente */
     }
 
     #accept-btn, #cancel-btn {
         width: 70%; /* Se expande para ocupar todo el ancho en dispositivos pequeños */
         padding: 10px;
+    }
+}
+
+/* Para pantallas grandes */
+@media (min-width: 769px) {
+    #cookie-banner {
+        width: 100%; /* Asegura que ocupe todo el ancho de la pantalla */
+        transform: translateY(0); /* Sin movimiento horizontal */
+        bottom: 0; /* Mantiene en la parte inferior */
     }
 }
 

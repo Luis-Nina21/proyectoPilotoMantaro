@@ -7,6 +7,31 @@ document.addEventListener("DOMContentLoaded", function() {
 
 function showCookieBanner() {
     var cookieBanner = document.getElementById("cookie-banner");
+    var windowWidth = window.innerWidth;
+
+    // Verifica el tamaño de la ventana y ajusta el banner de acuerdo al dispositivo
+    if (windowWidth <= 768) {
+        // Pantallas pequeñas: centra el banner horizontal y verticalmente
+        cookieBanner.style.width = "90%"; // Ajusta el ancho en pantallas pequeñas
+        cookieBanner.style.position = "fixed";
+        cookieBanner.style.top = "50%";
+        cookieBanner.style.left = "50%";
+        cookieBanner.style.transform = "translate(-50%, -50%)"; // Centramos completamente
+        cookieBanner.style.boxShadow = "6px 6px 6px 15px rgba(86, 87, 86, 0.251)";
+        cookieBanner.style.borderRadius = "10px";
+    } else {
+        // Pantallas grandes: el banner se coloca en la parte inferior
+        cookieBanner.style.width = "100%";
+        cookieBanner.style.height = "auto";
+        cookieBanner.style.position = "fixed";
+        cookieBanner.style.bottom = "0";
+        cookieBanner.style.left = "0";
+        cookieBanner.style.transform = "none"; // Elimina cualquier transformación previa
+        cookieBanner.style.borderRadius = "0";
+        cookieBanner.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.2)";
+    }
+
+    // Mostrar el banner con una transición suave
     cookieBanner.style.display = "block";
     cookieBanner.style.opacity = "0"; // Inicialmente invisible
     cookieBanner.style.transition = "opacity 1s"; // Transición de 1 segundo
@@ -41,14 +66,17 @@ function cancelCookies() {
 document.getElementById("accept-btn").addEventListener("click", acceptCookies);
 document.getElementById("cancel-btn").addEventListener("click", cancelCookies);
 
-// Efecto de movimiento sutil sin modificar el centrado
+// Efecto de movimiento solo en pantallas pequeñas
 window.addEventListener("scroll", function() {
     var cookieBanner = document.getElementById("cookie-banner");
+    var windowWidth = window.innerWidth;
 
-    // Mantener el banner centrado aplicando una ligera oscilación vertical
-    var scrollY = window.scrollY || window.pageYOffset;
-    var oscillation = Math.sin(scrollY * 0.05) * 3; // Oscilación leve (3px) para no alterar el centrado
-    
-    // Mantiene el banner centrado y aplica el movimiento leve con transform
-    cookieBanner.style.transform = `translate(-50%, ${oscillation}px)`;
+    if (windowWidth <= 768) {
+        // Aplica el movimiento solo en pantallas pequeñas
+        var scrollY = window.scrollY || window.pageYOffset;
+        var oscillation = Math.sin(scrollY * 0.05) * 3; // Oscilación leve (3px) solo en el eje Y
+
+        // Movimiento leve vertical, manteniendo centrado el banner
+        cookieBanner.style.transform = `translate(-50%, calc(-50% + ${oscillation}px))`;
+    }
 });
