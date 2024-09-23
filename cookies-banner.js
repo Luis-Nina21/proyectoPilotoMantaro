@@ -19,7 +19,7 @@ function showCookieBanner() {
         cookieBanner.style.left = "50%";
         cookieBanner.style.boxSizing = "border-box"; /* Asegura que el padding y border no rompan el layout */
         cookieBanner.style.transform = "translate(-50%, -50%)"; // Centramos completamente
-        cookieBanner.style.boxShadow = "6px 6px 6px 15px rgba(86, 87, 86, 0.251)";
+        cookieBanner.style.boxShadow = "0px 10px 10px rgba(19, 176, 19, 0.6), 0px 10px 10px rgba(19, 176, 19, 0.2)";
         cookieBanner.style.borderRadius = "10px";
     } else {
         // Pantallas grandes: el banner se coloca en la parte inferior
@@ -31,7 +31,7 @@ function showCookieBanner() {
         cookieBanner.style.left = "0";
         cookieBanner.style.transform = "none"; // Elimina cualquier transformación previa
         cookieBanner.style.borderRadius = "0";
-        cookieBanner.style.boxShadow = "0px 4px 12px rgba(0, 0, 0, 0.2)";
+        cookieBanner.style.boxShadow = "0px 10px rgba(19, 176, 19, 0.6), 0px 10px rgba(19, 176, 19, 0.2)";
     }
 
     // Mostrar el banner con una transición suave
