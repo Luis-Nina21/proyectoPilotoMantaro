@@ -80,12 +80,14 @@ body {
     #cookie-banner p {
         font-size: 14px;
         padding: 10px;
+        margin-bottom: 0px;
     }
 
     .btn-cookies {
         flex-direction: column;
         gap: 10px; /* Espacio entre los botones en dispositivos pequeños */
         flex-wrap: nowrap; /* Asegura que los botones se apilen verticalmente */
+        margin-top: 10px;
     }
 
     #accept-btn, #cancel-btn {

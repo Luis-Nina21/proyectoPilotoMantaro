@@ -17,6 +17,7 @@ function showCookieBanner() {
         cookieBanner.style.top = "50%";
         cookieBanner.style.paddingBottom = "10px";
         cookieBanner.style.left = "50%";
+        cookieBanner.style.boxSizing = "border-box"; /* Asegura que el padding y border no rompan el layout */
         cookieBanner.style.transform = "translate(-50%, -50%)"; // Centramos completamente
         cookieBanner.style.boxShadow = "6px 6px 6px 15px rgba(86, 87, 86, 0.251)";
         cookieBanner.style.borderRadius = "10px";
@@ -25,6 +26,7 @@ function showCookieBanner() {
         cookieBanner.style.width = "100%";
         cookieBanner.style.height = "auto";
         cookieBanner.style.position = "fixed";
+        cookieBanner.style.boxSizing = "border-box"; /* Asegura que el padding y border no rompan el layout */
         cookieBanner.style.bottom = "0";
         cookieBanner.style.left = "0";
         cookieBanner.style.transform = "none"; // Elimina cualquier transformación previa
