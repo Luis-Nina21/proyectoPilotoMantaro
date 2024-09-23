@@ -63,7 +63,7 @@ body {
 /* Responsividad */
 @media (max-width: 768px) {
     #cookie-banner p {
-        font-size: 12px;
+        font-size: 14px;
         padding: 10px;
     }
 
@@ -76,7 +76,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%); /* Asegura el centrado absoluto */
         margin: 0; /* Elimina cualquier margen lateral */
-        box-shadow: 0px 4px 12px rgba(64, 209, 38, 0.2); /* Sombra suave */
+        box-shadow: 0px 6px 15px rgba(56, 201, 30, 0.251); /* Sombra suave */
         border-radius: 10px;
     }
 
@@ -87,7 +87,7 @@ body {
     }
 
     #accept-btn, #cancel-btn {
-        width: 50%; /* Se expande para ocupar todo el ancho en dispositivos pequeños */
+        width: 70%; /* Se expande para ocupar todo el ancho en dispositivos pequeños */
         padding: 10px;
     }
 }
