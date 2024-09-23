@@ -28,7 +28,6 @@ body {
     padding: 20px;
     font-size: 14px;
     font-weight: 300;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: #e9e8e8;
     word-wrap: break-word; /* Asegura que el texto se mantenga dentro del contenedor */
 }
@@ -72,7 +71,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%); /* Asegura el centrado absoluto */
         margin: 0; /* Elimina cualquier margen lateral */
-        box-shadow: 0px 8px 10px rgba(19, 176, 19, 0.6), 0px 16px 10px rgba(19, 176, 19, 0.2); /* Sombra difuminada verde */
+        box-shadow: 0px 8px 8px rgba(19, 176, 19, 0.6), 0px 16px 10px rgba(19, 176, 19, 0.2); /* Sombra difuminada verde */
         border-radius: 10px;
         box-sizing: border-box; 
     }
