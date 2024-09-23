@@ -13,7 +13,7 @@ body {
     bottom: 0;
     left: 0;
     right: 0;
-    background: rgba(230, 230, 230, 0.941);
+    background: rgba(19, 176, 19, 0.843);
     padding: 20px 10px;
     text-align: center;
     z-index: 99999;
@@ -29,7 +29,7 @@ body {
     font-size: 14px;
     font-weight: 300;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #777;
+    color: #e9e8e8;
     word-wrap: break-word; /* Asegura que el texto se mantenga dentro del contenedor */
 }
 
