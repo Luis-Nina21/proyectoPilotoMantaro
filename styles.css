@@ -63,6 +63,11 @@ body {
         font-size: 12px;
         padding: 10px;
     }
+    #cookie-banner{
+        bottom: 50%;
+        
+
+    }
 
     .btn-cookies {
         flex-direction: column;
