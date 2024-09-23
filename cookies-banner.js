@@ -15,6 +15,7 @@ function showCookieBanner() {
         cookieBanner.style.width = "90%"; // Ajusta el ancho en pantallas pequeñas
         cookieBanner.style.position = "fixed";
         cookieBanner.style.top = "50%";
+        cookieBanner.style.paddingBottom = "10px";
         cookieBanner.style.left = "50%";
         cookieBanner.style.transform = "translate(-50%, -50%)"; // Centramos completamente
         cookieBanner.style.boxShadow = "6px 6px 6px 15px rgba(86, 87, 86, 0.251)";
