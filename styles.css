@@ -72,7 +72,7 @@ body {
         left: 50%;
         transform: translate(-50%, -50%); /* Asegura el centrado absoluto */
         margin: 0; /* Elimina cualquier margen lateral */
-        box-shadow: 6px 6px 6px 15px rgba(86, 87, 86, 0.251); /* Sombra suave */
+        box-shadow: 4px 5px 6px 15px rgba(86, 87, 86, 0.251); /* Sombra suave */
         border-radius: 10px;
         box-sizing: border-box; /* Asegura que el padding y border no rompan el layout */
     }
