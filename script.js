@@ -38,16 +38,6 @@ document.getElementById("navToggle").addEventListener("click", function() {
 
 
 
-
-
-
-
-
-
-
-
-
-
 // Función para actualizar el índice de la diapositiva actual
 function currentSlide(n) {
     slideIndex = n;

@@ -329,7 +329,6 @@ body {
     font-size: 2rem;
     z-index: 1;
     transition: opacity 0.5s ease-in-out; /* Efecto de desvanecimiento */
-
 }
 
 .slide::before {
@@ -360,7 +359,6 @@ body {
     color: #f2ab27e4;
 }
 
-
 .news-button {
     display: flex;
     justify-content: center;
@@ -380,13 +378,11 @@ body {
     cursor: pointer;
     transition: background-color 0.3s ease;
     z-index: 20;
-    
 }
 
 .news-button:hover {
     background-color: rgba(255, 255, 255, 0.213); /* Color de fondo en hover */
 }
-
 
 /* Dots del carrusel */
 .dots {
@@ -409,26 +405,51 @@ body {
     background-color: #555;
 }
 
-
-
+/* Flechas de navegación */
 .arrow {
     position: absolute;
     top: 50%; /* Centrar verticalmente */
     transform: translateY(-50%); /* Ajustar para que esté realmente centrado */
     font-size: 30px;
-    color: rgba(255, 255, 255, 0.895);
+    color: white;
     cursor: pointer;
     z-index: 10; /* Asegurarnos de que estén por encima de otros elementos */
     user-select: none; /* Evitar que se seleccione el texto al hacer clic */
 }
 
 .left {
-    left: 40px; /* Posición a la izquierda */
+    left: 10px; /* Posición a la izquierda */
 }
 
 .right {
-    right: 40px; /* Posición a la derecha */
+    right: 10px; /* Posición a la derecha */
 }
+
+
+
+.carousel {
+    position: relative; /* Necesario para las flechas */
+}
+
+.arrow {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar para que esté realmente centrado */
+    font-size: 30px;
+    color: white;
+    cursor: pointer;
+    z-index: 10; /* Asegurarnos de que estén por encima de otros elementos */
+    user-select: none; /* Evitar que se seleccione el texto al hacer clic */
+}
+
+.left {
+    left: 10px; /* Posición a la izquierda */
+}
+
+.right {
+    right: 10px; /* Posición a la derecha */
+}
+
 
 
 
