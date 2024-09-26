@@ -778,6 +778,13 @@ body {
     .conceptoMantaro {
         margin-bottom: 20px;
     }
+    .left {
+        left: 20px; /* Posición a la izquierda */
+    }
+    
+    .right {
+        right: 20px; /* Posición a la derecha */
+    }
 }
 
 
