@@ -313,7 +313,7 @@ body {
 
 .slides {
     display: flex;
-    transition: transform 0.5s ease-in-out;
+    transition: transform 1s ease-in-out;
 }
 
 .slide {
@@ -328,6 +328,8 @@ body {
     color: white;
     font-size: 2rem;
     z-index: 1;
+    transition: opacity 0.5s ease-in-out; /* Efecto de desvanecimiento */
+
 }
 
 .slide::before {
@@ -407,6 +409,26 @@ body {
     background-color: #555;
 }
 
+
+
+.arrow {
+    position: absolute;
+    top: 50%; /* Centrar verticalmente */
+    transform: translateY(-50%); /* Ajustar para que esté realmente centrado */
+    font-size: 30px;
+    color: rgba(255, 255, 255, 0.895);
+    cursor: pointer;
+    z-index: 10; /* Asegurarnos de que estén por encima de otros elementos */
+    user-select: none; /* Evitar que se seleccione el texto al hacer clic */
+}
+
+.left {
+    left: 40px; /* Posición a la izquierda */
+}
+
+.right {
+    right: 40px; /* Posición a la derecha */
+}
 
 
 
