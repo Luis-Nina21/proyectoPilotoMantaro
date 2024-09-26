@@ -129,75 +129,72 @@
 
 
         
-        <!-- Caudal del Río -->
-        <div class="info-card">
-            <h4>Caudal de la cuenca del Mantaro (m³/s)</h4>
-            <div class="caudal-data">
-                <p class="caudal-number">350 m³/s</p>
-               <canvas id="caudalChart"></canvas>
+                <!-- Caudal del Río -->
+            <div class="info-card">
+                <h4>Caudal de la cuenca del Mantaro (m³/s)</h4>
+                <div class="caudal-data">
+                    <p class="caudal-number">350 m³/s</p>
+                    <canvas id="caudalChart"></canvas>
+                </div>
             </div>
-        </div>
-        
 
-
-        <!-- Calidad del Agua -->
-        <div class="info-card calidad-card">
-            <h4>Calidad del Agua (Turbidez)</h4>
-            <div class="calidad-image">
-                <img src="./imagenes/CalidadAgua.jpg" alt="Calidad del Agua">
+            <!-- Calidad del Agua -->
+            <div class="info-card calidad-card">
+                <h4>Calidad del Agua (Turbidez)</h4>
+                <div class="calidad-image">
+                    <img src="./imagenes/CalidadAgua.jpg" alt="Calidad del Agua">
+                </div>
+                <p class="turbidez-dato">Turbidez: 3.2 NTU</p>
             </div>
-            <p class="turbidez-dato">Turbidez: 3.2 NTU</p>
 
-        </div>
-     
-
-    </section>
+         </section>
     
     
 
-    <!-- Sección de tarjetas -->
-    <section class="cards-section">
-        <h2>Zonas Importantes del Río Mantaro</h2>
-        <div class="cards-container">
+   <!-- Sección de tarjetas -->
+<section class="cards-section">
+    <h2>Zonas Importantes del Río Mantaro</h2>
+    <div class="cards-container">
 
-            <!-- Tarjeta 4 -->
-            <div class="card" onclick="openInfo('turismo')">
-                <img src="/imagenes/turismoMantaro.jpg" alt="Lugares Turísticos">
-                <div class="card-content">
-                    <h3>Lugares Turísticos</h3>
-                    <p>Visita los destinos turísticos más importantes alrededor del río.</p>
-                </div>
+        <!-- Tarjeta 4 -->
+        <div class="card" onclick="openInfo('turismo')">
+            <img src="/imagenes/turismoMantaro.jpg" alt="Lugares Turísticos">
+            <div class="card-content">
+                <h3>Lugares Turísticos</h3>
+                <p>Visita los destinos turísticos más importantes alrededor del río.</p>
             </div>
-            <!-- Tarjeta 1 -->
-            <div class="card" onclick="openInfo('flora')">
-                <img style="width: 100%;"  src="/imagenes/floraMantaro.jpg" alt="Flora">
-                <div class="card-content">
-                    <h3>Flora del Valle del Mantaro</h3>
-                    <p>Explora la biodiversidad vegetal del valle, rica en especies endémicas.</p>
-                </div>
-            </div>
-
-            <!-- Tarjeta 2 -->
-            <div class="card" onclick="openInfo('fauna')">
-                <img src="./imagenes/faunaMantaro.png" alt="Fauna">
-                <div class="card-content">
-                    <h3>Fauna del Río Mantaro</h3>
-                    <p>Descubre la vida silvestre que habita en las cercanías del río.</p>
-                </div>
-            </div>
-
-            <!-- Tarjeta 3 -->
-            <div class="card" onclick="openInfo('caudal')">
-                <img src="/imagenes/caudalMantaro.jpg" alt="Caudal del Río">
-                <div class="card-content">
-                    <h3>Caudal en Tiempo Real</h3>
-                    <p>Simulación del caudal del río Mantaro actualizado en tiempo real.</p>
-                </div>
-            </div>
-
-            
         </div>
-    </section>
+        <!-- Tarjeta 1 -->
+        <div class="card" onclick="openInfo('flora')">
+            <img style="width: 100%;" src="/imagenes/floraMantaro.jpg" alt="Flora">
+            <div class="card-content">
+                <h3>Flora del Valle del Mantaro</h3>
+                <p>Explora la biodiversidad vegetal del valle, rica en especies endémicas.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 2 -->
+        <div class="card" onclick="openInfo('fauna')">
+            <img src="./imagenes/faunaMantaro.png" alt="Fauna">
+            <div class="card-content">
+                <h3>Fauna del Río Mantaro</h3>
+                <p>Descubre la vida silvestre que habita en las cercanías del río.</p>
+            </div>
+        </div>
+
+        <!-- Tarjeta 3 -->
+        <div class="card" onclick="openInfo('caudal')">
+            <img src="/imagenes/caudalMantaro.jpg" alt="Caudal del Río">
+            <div class="card-content">
+                <h3>Caudal en Tiempo Real</h3>
+                <p>Simulación del caudal del río Mantaro actualizado en tiempo real.</p>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
     
 
     <!-- Mapa Interactivo -->
@@ -262,6 +259,8 @@
     <script src="/scrollTop.js" ></script>
     <script src="/cookies-banner.js"></script>
     <script src="/script.js" ></script>
+    <script src="/desvanecimiento.js" ></script>
+    <script src="/desva_2.js"></script>
 </footer>
 
     

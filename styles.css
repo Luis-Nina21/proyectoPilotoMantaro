@@ -905,8 +905,31 @@ body {
 
   
 
+.card {
+    opacity: 0; /* Comienza invisible */
+    transform: translateY(50px); /* Comienza 50px más abajo */
+    transition: opacity 0.6s ease, transform 0.6s ease; /* Transición suave */
+  }
+  
+  .card.animate {
+    opacity: 1; /* Se vuelve visible */
+    transform: translateY(0); /* Se mueve a su posición original */
+  }
+  
+  
 
+/* Efecto de elevación para el div del clima */
+#climayconcepto {
+    transition: transform 0.3s, box-shadow 0.3s; /* Transiciones suaves */
+}
 
+#climayconcepto:hover {
+    transform: translateY(-5px); /* Eleva el div */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Sombra al hacer hover */
+}
+
+  
+  
 
 
 /* Ocultar logos de entidades en dispositivos móviles cuando el encabezado está fijo */
