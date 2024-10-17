@@ -102,32 +102,27 @@
 
 
     <section class="info-section">
-        <div id="weather"></div>
-
 
 
         <div id="climayconcepto">
 
-        <div class="thermometer-svg-container">
-            <div class="titulo_clima">
-                <h2>Clima</h2>
+            <div class="clima-container">
+                <h1>Clima en Valle del Colca</h1>
+                <div class="clima-info">
+                    <div class="temperatura"></div>
+                    <div class="descripcion">Cielo claro</div>
+                </div>
+                <div class="detalles">
+                    <div class="detalle-item">
+                        <div class="detalle-valor"></div>
+                        <div class="detalle-etiqueta">Sensación</div>
+                    </div>
+                    <div class="detalle-item">
+                        <div class="detalle-valor"></div>
+                        <div class="detalle-etiqueta">Humedad</div>
+                    </div>
+                </div>
             </div>
-            <div>
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" class="bi bi-thermometer-sun" viewBox="0 0 16 16">
-                    <path class="fill-red" d="M5 12.5a1.5 1.5 0 1 1-2-1.415V2.5a.5.5 0 0 1 1 0v8.585A1.5 1.5 0 0 1 5 12.5"/>
-                    <path class="outline" d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1"/>
-                    <path class="sun" d="M9.5 2a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5m4.243 1.757a.5.5 0 0 1 0 .707l-.707.708a.5.5 0 1 1-.708-.708l.708-.707a.5.5 0 0 1 .707 0M8 5.5a.5.5 0 0 1 .5-.5 3 3 0 1 1 0 6 .5.5 0 0 1 0-1 2 2 0 0 0 0-4 .5.5 0 0 1-.5-.5M12.5 8a.5.5 0 0 1 .5-.5h1a.5.5 0 1 1 0 1h-1a.5.5 0 0 1-.5-.5m-1.172 2.828a.5.5 0 0 1 .708 0l.707.708a.5.5 0 0 1-.707.707l-.708-.707a.5.5 0 0 1 0-.708M8.5 12a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-1 0v-1a.5.5 0 0 1 .5-.5"/>
-                </svg>
-                <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="none" stroke="currentColor" class="bi bi-thermometer-snow" viewBox="0 0 16 16">
-                    <path class="fill-blue" d="M5 12.5a1.5 1.5 0 1 1-2-1.415V9.5a.5.5 0 0 1 1 0v1.585A1.5 1.5 0 0 1 5 12.5"/>
-                    <path class="outline" d="M1 2.5a2.5 2.5 0 0 1 5 0v7.55a3.5 3.5 0 1 1-5 0zM3.5 1A1.5 1.5 0 0 0 2 2.5v7.987l-.167.15a2.5 2.5 0 1 0 3.333 0L5 10.486V2.5A1.5 1.5 0 0 0 3.5 1"/>
-                    <path class="snowflake" d="M9.5 2a.5.5 0 0 1 .5.5v1.293l.646-.647a.5.5 0 0 1 .708.708L9 5.207v1.927l1.669-.963.495-1.85a.5.5 0 1 1 .966.26l-.237.882 1.12-.646a.5.5 0 0 1 .5.866l-1.12.646.884.237a.5.5 0 1 1-.26.966l-1.848-.495L9.5 8l1.669.963 1.849-.495a.5.5 0 1 1 .258.966l-.883.237 1.12.646a.5.5 0 0 1-.5.866l-1.12-.646.237.883a.5.5 0 1 1-.966.258L10.67 9.83 9 8.866v1.927l1.354 1.353a.5.5 0 0 1-.708.708L9 12.207V13.5a.5.5 0 0 1-1 0v-11a.5.5 0 0 1 .5-.5"/>
-                </svg>
-                <h3>15°C <svg xmlns="http://www.w3.org/2000/svg" padding-bottom="10px" color="red" width="16" height="16" fill="currentColor" class="bi bi-caret-down-square-fill" viewBox="0 0 16 16">
-                    <path d="M0 2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2zm4 4a.5.5 0 0 0-.374.832l4 4.5a.5.5 0 0 0 .748 0l4-4.5A.5.5 0 0 0 12 6z"/>
-                </svg></h3>
-            </div>
-        </div>
         <div class="conceptoMantaro">
             <h2>¿Que es la cuenca del Mantaro?</h2>
             <p>La cuenca del rio Mantaro, localizada en los Andes Centrales del Perú, abarca un área de 3.455.000 ha y comprende parcialmente las regiones de Junín, Pasco, Huancavelica y Ayacucho. Es considerada como una reserva energética, para el abastecimiento eléctrico del Perú, proveyendo el 35% de la demanda nacional eléctrica.
@@ -274,34 +269,49 @@
 
     
 <script>
-    const apiKey = 'TU_API_KEY'; // Reemplaza con tu API Key real
-    const lat = -12.0464; // Latitud de Lima
-    const lon = -77.0428; // Longitud de Lima
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+        const API_KEY = 'a5780a1f3158e6ad55e85f1bc4693412'; // Reemplaza con tu API key real
+        const LAT = -15.637915; // Latitud del Valle del Colca
+        const LON = -71.609230; // Longitud del Valle del Colca
 
-    fetch(url)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+        async function obtenerClimaPorCoordenadas(lat, lon) {
+            const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`;
+            
+            try {
+                const respuesta = await fetch(url);
+                if (!respuesta.ok) {
+                    throw new Error(`HTTP error! status: ${respuesta.status}`);
+                }
+                return await respuesta.json();
+            } catch (error) {
+                console.error('Error al obtener el clima:', error);
+                throw error;
             }
-            return response.json();
-        })
-        .then(data => {
-            const weatherDiv = document.getElementById('weather');
-            const temperature = data.current.temp;
-            const description = data.current.weather[0].description;
+        }
 
-            weatherDiv.innerHTML = `
-                <p>Temperatura: ${temperature} °C</p>
-                <p>Descripción: ${description}</p>
-            `;
-        })
-        .catch(error => {
-            console.error('Error:', error);
-            const weatherDiv = document.getElementById('weather');
-            weatherDiv.innerHTML = `<p>Error al obtener datos del clima: ${error.message}</p>`;
-        });
-</script>
+        function mostrarClima(datos) {
+            document.querySelector('.temperatura').textContent = `${Math.round(datos.main.temp)}°C`;
+            document.querySelector('.descripcion').textContent = datos.weather[0].description;
+            document.querySelector('.detalle-item:nth-child(1) .detalle-valor').textContent = `${Math.round(datos.main.feels_like)}°C`;
+            document.querySelector('.detalle-item:nth-child(2) .detalle-valor').textContent = `${datos.main.humidity}%`;
+            
+            const ahora = new Date();
+            document.querySelector('.ultima-actualizacion').textContent = `Última actualización: ${ahora.toLocaleTimeString()}`;
+        }
+
+        async function cargarClima() {
+            try {
+                const datos = await obtenerClimaPorCoordenadas(LAT, LON);
+                mostrarClima(datos);
+            } catch (error) {
+                console.error('No se pudo cargar el clima:', error);
+            }
+        }
+
+        window.addEventListener('load', cargarClima);
+
+        // Actualizar cada 10 minutos
+        setInterval(cargarClima, 600000);
+    </script>
 </body>
 
 </html>
