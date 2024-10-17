@@ -18,7 +18,6 @@
         <button id="accept-btn">Aceptar</button>
         <button id="cancel-btn">Más información</button>
        </div>
-       
     </div>
     
 
@@ -107,7 +106,7 @@
         <div id="climayconcepto">
 
             <div class="clima-container">
-                <h1>Clima en Valle del Colca</h1>
+                <h1>Clima en Valle del Mantaro</h1>
                 <div class="clima-info">
                     <div class="temperatura"></div>
                     <div class="descripcion">Cielo claro</div>
@@ -270,8 +269,8 @@
     
 <script>
         const API_KEY = 'a5780a1f3158e6ad55e85f1bc4693412'; // Reemplaza con tu API key real
-        const LAT = -15.637915; // Latitud del Valle del Colca
-        const LON = -71.609230; // Longitud del Valle del Colca
+        const LAT = -11.784014; // Latitud del Valle del Colca
+        const LON = -75.426636; // Longitud del Valle del Colca
 
         async function obtenerClimaPorCoordenadas(lat, lon) {
             const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${API_KEY}&units=metric&lang=es`;
