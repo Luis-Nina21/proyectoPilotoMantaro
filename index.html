@@ -102,8 +102,8 @@
 
 
     <section class="info-section">
-        <h1>Clima Actual</h1>
-    <div id="weather"></div>
+        <div id="weather"></div>
+
 
 
         <div id="climayconcepto">
@@ -276,12 +276,12 @@
 <script>
     const apiKey = 'TU_API_KEY'; // Reemplaza con tu API Key
     const city = 'Lima'; // Cambia por la ciudad que desees consultar
-    const url = `https://api.openweathermap.org/data/3.0/onecall?lat={lat}&lon={lon}&exclude={part}&appid={API key}`;
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},pe&appid=${apiKey}&units=metric`;
 
     fetch(url)
         .then(response => {
             if (!response.ok) {
-                throw new Error('Error en la solicitud de clima');
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
             return response.json();
         })
