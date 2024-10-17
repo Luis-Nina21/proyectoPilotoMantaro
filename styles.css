@@ -868,6 +868,10 @@ h1 {
 .thermometer-svg-container{
     width: 100%;
 }
+
+
+
+
 /* Estilo general para las tarjetas de información */
 .info-card {
     background: black;
@@ -910,6 +914,16 @@ h1 {
     z-index: 2; /* Asegura que el número esté por encima del fondo */
 }
 
+/* Estilo del dato de turbidez */
+.turbidez-dato {
+    color: #fff; /* Cambiado a blanco para que contraste con el fondo oscuro */
+    font-size: 36px;
+    font-weight: bold;
+    margin: 20px 0;
+    word-wrap: break-word; /* Evita que el texto se desborde */
+    line-height: 1.2;
+    z-index: 2; /* Asegura que el número esté por encima del fondo */
+}
 /* Contenedor de los datos de caudal */
 .caudal-data {
     display: flex;
@@ -918,15 +932,31 @@ h1 {
     justify-content: center;
 }
 
-/* Fondo de la tarjeta con imagen y oscurecimiento */
-.info-card::before {
+/* Fondo de la tarjeta de caudal con imagen y oscurecimiento */
+.caudal-card::before {
     content: '';
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url('./imagenes/CalidadAgua.jpg'); /* Reemplaza con la URL de la imagen que desees */
+    background-image: url('https://consultasenlinea.mincetur.gob.pe/fichaInventario/foto.aspx?cod=437957'); /* Imagen para la tarjeta de caudal */
+    background-size: cover;
+    background-position: center;
+    z-index: 1;
+    opacity: 0.5; /* Oscurece el fondo */
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Efecto de oscurecimiento y zoom */
+}
+
+/* Fondo de la tarjeta de calidad del agua con imagen y oscurecimiento */
+.calidad-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://i0.wp.com/www.actualidadambiental.pe/wp-content/uploads/2021/07/rio-santa-contaminacion-andina-700x444.jpg?resize=700%2C444'); /* Imagen diferente para calidad del agua */
     background-size: cover;
     background-position: center;
     z-index: 1;
@@ -940,7 +970,6 @@ h1 {
     transform: scale(1.1); /* Efecto de zoom */
 }
 
-
 /* Estilo de la imagen en la tarjeta de calidad del agua */
 .calidad-image img {
     width: 100%;
@@ -948,6 +977,7 @@ h1 {
     border-radius: 8px;
     margin-top: 10px;
 }
+
 
 /* Hacer que las tarjetas sean responsivas en pantallas pequeñas */
 @media (max-width: 768px) {

@@ -132,23 +132,21 @@
 
 
         
-                <!-- Caudal del Río -->
-            <div class="info-card">
-                <h4>Caudal de la cuenca del Mantaro (m³/s)</h4>
-                <div class="caudal-data">
-                    <p class="caudal-number">350 m³/s</p>
-                    <canvas id="caudalChart"></canvas>
-                </div>
-            </div>
+ <!-- Caudal del Río -->
+<div class="info-card caudal-card">
+    <h4>Caudal de la cuenca del Mantaro (m³/s)</h4>
+    <div class="caudal-data">
+        <p class="caudal-number">350 m³/s</p>
+    </div>
+</div>
 
-            <!-- Calidad del Agua -->
-            <div class="info-card calidad-card">
-                <h4>Calidad del Agua (Turbidez)</h4>
-                <div class="calidad-image">
-                    <img src="./imagenes/CalidadAgua.jpg" alt="Calidad del Agua">
-                </div>
-                <p class="turbidez-dato">Turbidez: 3.2 NTU</p>
-            </div>
+<!-- Calidad del Agua -->
+<div class="info-card calidad-card">
+    <h4>Calidad del Agua (Turbidez)</h4>
+    <div class="calidad-image">
+        <p class="turbidez-dato">Turbidez: 3.2 NTU</p>
+    </div>
+</div>
 
          </section>
     
@@ -310,6 +308,25 @@
 
         // Actualizar cada 10 minutos
         setInterval(cargarClima, 600000);
+
+
+
+        function generarRandom(min, max) {
+        return (Math.random() * (max - min) + min).toFixed(2);
+    }
+
+    function actualizarValores() {
+        // Valores aleatorios para el caudal del río
+        const caudal = generarRandom(100, 500); // Ejemplo de rango entre 100 y 500 m³/s
+        document.querySelector('.caudal-number').textContent = `${caudal} m³/s`;
+
+        // Valores aleatorios para la turbidez del agua
+        const turbidez = generarRandom(1, 10); // Ejemplo de rango entre 1 y 10 NTU
+        document.querySelector('.turbidez-dato').textContent = `Turbidez: ${turbidez} NTU`;
+    }
+
+    // Actualizar cada 5 segundos para simular datos dinámicos
+    setInterval(actualizarValores, 5000);
     </script>
 </body>
 
