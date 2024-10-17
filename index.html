@@ -274,9 +274,10 @@
 
     
 <script>
-    const apiKey = 'TU_API_KEY'; // Reemplaza con tu API Key
-    const city = 'Lima'; // Cambia por la ciudad que desees consultar
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city},pe&appid=${apiKey}&units=metric`;
+    const apiKey = 'TU_API_KEY'; // Reemplaza con tu API Key real
+    const lat = -12.0464; // Latitud de Lima
+    const lon = -77.0428; // Longitud de Lima
+    const url = `https://api.openweathermap.org/data/3.0/onecall?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
 
     fetch(url)
         .then(response => {
@@ -287,8 +288,8 @@
         })
         .then(data => {
             const weatherDiv = document.getElementById('weather');
-            const temperature = data.main.temp;
-            const description = data.weather[0].description;
+            const temperature = data.current.temp;
+            const description = data.current.weather[0].description;
 
             weatherDiv.innerHTML = `
                 <p>Temperatura: ${temperature} °C</p>
@@ -296,11 +297,10 @@
             `;
         })
         .catch(error => {
-    console.error('Error:', error);
-    const weatherDiv = document.getElementById('weather');
-    weatherDiv.innerHTML = `<p>Error al obtener datos del clima: ${error.message}</p>`;
-});
-
+            console.error('Error:', error);
+            const weatherDiv = document.getElementById('weather');
+            weatherDiv.innerHTML = `<p>Error al obtener datos del clima: ${error.message}</p>`;
+        });
 </script>
 </body>
 
