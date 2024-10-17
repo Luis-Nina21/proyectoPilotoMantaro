@@ -296,10 +296,11 @@
             `;
         })
         .catch(error => {
-            console.error('Error:', error);
-            const weatherDiv = document.getElementById('weather');
-            weatherDiv.innerHTML = '<p>Error al obtener datos del clima.</p>';
-        });
+    console.error('Error:', error);
+    const weatherDiv = document.getElementById('weather');
+    weatherDiv.innerHTML = `<p>Error al obtener datos del clima: ${error.message}</p>`;
+});
+
 </script>
 </body>
 
